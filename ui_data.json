@@ -1,0 +1,2193 @@
+{
+ "meta": {
+  "method": "Gradient-boosting classifier \u00b7 no betting odds \u00b7 calibrated",
+  "accuracy": 47.3,
+  "baseline": 44.2,
+  "seasons": 6,
+  "note": "Possession tested and excluded from the model \u2014 no accuracy gain over xG-strength."
+ },
+ "leaguePossession": [
+  {
+   "code": "MCI",
+   "team": "Man City",
+   "val": 71.9
+  },
+  {
+   "code": "BHA",
+   "team": "Brighton",
+   "val": 71.4
+  },
+  {
+   "code": "MUN",
+   "team": "Man United",
+   "val": 62.3
+  },
+  {
+   "code": "LIV",
+   "team": "Liverpool",
+   "val": 61.7
+  },
+  {
+   "code": "FUL",
+   "team": "Fulham",
+   "val": 61.6
+  },
+  {
+   "code": "ARS",
+   "team": "Arsenal",
+   "val": 59.8
+  },
+  {
+   "code": "TOT",
+   "team": "Tottenham",
+   "val": 58.9
+  },
+  {
+   "code": "SUN",
+   "team": "Sunderland",
+   "val": 51.5
+  },
+  {
+   "code": "BRE",
+   "team": "Brentford",
+   "val": 47.6
+  },
+  {
+   "code": "AVL",
+   "team": "Aston Villa",
+   "val": 46.6
+  },
+  {
+   "code": "NEW",
+   "team": "Newcastle",
+   "val": 46.4
+  },
+  {
+   "code": "BOU",
+   "team": "Bournemouth",
+   "val": 45.1
+  },
+  {
+   "code": "EVE",
+   "team": "Everton",
+   "val": 42.7
+  },
+  {
+   "code": "NFO",
+   "team": "Nott'm Forest",
+   "val": 42.6
+  },
+  {
+   "code": "COV",
+   "team": "Coventry",
+   "val": 42.3
+  },
+  {
+   "code": "LEE",
+   "team": "Leeds",
+   "val": 41.1
+  },
+  {
+   "code": "IPS",
+   "team": "Ipswich",
+   "val": 40.7
+  },
+  {
+   "code": "CRY",
+   "team": "Crystal Palace",
+   "val": 40.6
+  },
+  {
+   "code": "CHE",
+   "team": "Chelsea",
+   "val": 36.5
+  },
+  {
+   "code": "HUL",
+   "team": "Hull",
+   "val": 28.7
+  }
+ ],
+ "matchdays": {
+  "MD1": {
+   "dateRange": "17 \u2013 19 OCT 2026",
+   "matches": [
+    {
+     "id": "m1-01",
+     "home": "Everton",
+     "away": "Chelsea",
+     "homeCode": "EVE",
+     "awayCode": "CHE",
+     "date": "SAT 17 OCT",
+     "venue": "Goodison Park, Liverpool",
+     "probs": {
+      "home": 0.447,
+      "draw": 0.233,
+      "away": 0.32
+     },
+     "lean": "Everton",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 42.7,
+     "awayPoss": 36.5,
+     "homeForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "L"
+     ],
+     "xgEdgeTeam": "Chelsea",
+     "xgEdgeCode": "CHE",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Recent venue form: Everton 1.6 points per home game; Chelsea 0.8 per away game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Everton 1.8 points per game; Chelsea 1.4."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Everton are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Across the last 6 meetings, Everton took 1.2 points per game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Chance-quality rating: Everton 1499; Chelsea 1520."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Overall rating: Everton 1510; Chelsea 1537."
+      }
+     ]
+    },
+    {
+     "id": "m1-02",
+     "home": "Fulham",
+     "away": "Hull",
+     "homeCode": "FUL",
+     "awayCode": "HUL",
+     "date": "SAT 17 OCT",
+     "venue": "Craven Cottage, London",
+     "probs": {
+      "home": 0.447,
+      "draw": 0.223,
+      "away": 0.33
+     },
+     "lean": "Fulham",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 61.6,
+     "awayPoss": 28.7,
+     "homeForm": [
+      "L",
+      "L",
+      "L",
+      "D",
+      "D"
+     ],
+     "awayForm": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "L"
+     ],
+     "xgEdgeTeam": "Hull",
+     "xgEdgeCode": "HUL",
+     "pro": [
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Fulham are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Last five matches: Fulham 0.4 points per game; Hull 1.6."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Last five matches: Fulham allowed 16.6 shots per game; Hull allowed 13.8."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.5,
+       "detail": "Recent venue form: Fulham 0.8 points per home game; Hull 1.3 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Overall rating: Fulham 1486; Hull 1514."
+      }
+     ]
+    },
+    {
+     "id": "m1-03",
+     "home": "Brentford",
+     "away": "Liverpool",
+     "homeCode": "BRE",
+     "awayCode": "LIV",
+     "date": "SAT 17 OCT",
+     "venue": "Gtech Community Stadium",
+     "probs": {
+      "home": 0.331,
+      "draw": 0.256,
+      "away": 0.412
+     },
+     "lean": "Liverpool",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 47.6,
+     "awayPoss": 61.7,
+     "homeForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "awayForm": [
+      "D",
+      "D",
+      "W",
+      "D",
+      "W"
+     ],
+     "xgEdgeTeam": "Liverpool",
+     "xgEdgeCode": "LIV",
+     "pro": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Across the last 6 meetings, Brentford took 0.7 points per game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.5,
+       "detail": "Overall rating: Brentford 1552; Liverpool 1621."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Chance-quality rating: Brentford 1519; Liverpool 1548."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Brentford allowed 13.4 shots per game; Liverpool allowed 11.6."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Recent venue form: Brentford 2.2 points per home game; Liverpool 1.4 per away game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Brentford are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m1-04",
+     "home": "Man City",
+     "away": "Ipswich",
+     "homeCode": "MCI",
+     "awayCode": "IPS",
+     "date": "SAT 17 OCT",
+     "venue": "Etihad Stadium, Manchester",
+     "probs": {
+      "home": 0.593,
+      "draw": 0.211,
+      "away": 0.196
+     },
+     "lean": "Man City",
+     "leanConfidence": "HIGH CONVICTION",
+     "homePoss": 71.9,
+     "awayPoss": 40.7,
+     "homeForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "L",
+      "L",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Man City",
+     "xgEdgeCode": "MCI",
+     "pro": [
+      {
+       "factor": "Overall team strength",
+       "strength": "Strong edge",
+       "weight": 2.3,
+       "detail": "Overall rating: Man City 1696; Ipswich 1395."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.8,
+       "detail": "Last five matches: Man City 3.0 points per game; Ipswich 1.2."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Strong edge",
+       "weight": 1.7,
+       "detail": "Chance-quality rating: Man City 1572; Ipswich 1455."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Strong edge",
+       "weight": 1.7,
+       "detail": "Across the last 2 meetings, Man City took 3.0 points per game."
+      }
+     ],
+     "con": []
+    },
+    {
+     "id": "m1-05",
+     "home": "Newcastle",
+     "away": "Aston Villa",
+     "homeCode": "NEW",
+     "awayCode": "AVL",
+     "date": "SAT 17 OCT",
+     "venue": "St. James' Park, Newcastle",
+     "probs": {
+      "home": 0.326,
+      "draw": 0.273,
+      "away": 0.401
+     },
+     "lean": "Aston Villa",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 46.4,
+     "awayPoss": 46.6,
+     "homeForm": [
+      "D",
+      "W",
+      "D",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "D",
+      "L",
+      "W"
+     ],
+     "xgEdgeTeam": "Aston Villa",
+     "xgEdgeCode": "AVL",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Last five matches: Newcastle allowed 19.6 shots per game; Aston Villa allowed 16.2."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Newcastle 1.6 points per game; Aston Villa 0.8."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Recent venue form: Newcastle 2.2 points per home game; Aston Villa 1.6 per away game."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Across the last 6 meetings, Newcastle took 1.7 points per game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Newcastle are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m1-06",
+     "home": "Brighton",
+     "away": "Crystal Palace",
+     "homeCode": "BHA",
+     "awayCode": "CRY",
+     "date": "SUN 18 OCT",
+     "venue": "Amex Stadium, Brighton",
+     "probs": {
+      "home": 0.451,
+      "draw": 0.258,
+      "away": 0.291
+     },
+     "lean": "Brighton",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 71.4,
+     "awayPoss": 40.6,
+     "homeForm": [
+      "W",
+      "L",
+      "D",
+      "W",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "W",
+      "L",
+      "D"
+     ],
+     "xgEdgeTeam": "Brighton",
+     "xgEdgeCode": "BHA",
+     "pro": [
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Last five matches: Brighton 2.0 points per game; Crystal Palace 0.8."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Strong edge",
+       "weight": 1.1,
+       "detail": "Last five matches: Brighton allowed 11.6 shots per game; Crystal Palace allowed 16.8."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Recent venue form: Brighton 2.0 points per home game; Crystal Palace 1.0 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Overall rating: Brighton 1582; Crystal Palace 1480."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Across the last 6 meetings, Brighton took 0.8 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m1-07",
+     "home": "Bournemouth",
+     "away": "Sunderland",
+     "homeCode": "BOU",
+     "awayCode": "SUN",
+     "date": "SUN 18 OCT",
+     "venue": "Vitality Stadium, Bournemouth",
+     "probs": {
+      "home": 0.461,
+      "draw": 0.257,
+      "away": 0.281
+     },
+     "lean": "Bournemouth",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 45.1,
+     "awayPoss": 51.5,
+     "homeForm": [
+      "L",
+      "D",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "L"
+     ],
+     "xgEdgeTeam": "Bournemouth",
+     "xgEdgeCode": "BOU",
+     "pro": [
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Chance-quality rating: Bournemouth 1536; Sunderland 1498."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.5,
+       "detail": "Overall rating: Bournemouth 1545; Sunderland 1484."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Last five matches: Bournemouth allowed 10.8 shots per game; Sunderland allowed 12.0."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Recent venue form: Bournemouth 1.2 points per home game; Sunderland 1.0 per away game."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Strong edge",
+       "weight": 1.1,
+       "detail": "Across the last 2 meetings, Bournemouth took 0.5 points per game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Bournemouth 0.6 points per game; Sunderland 0.8."
+      }
+     ]
+    },
+    {
+     "id": "m1-08",
+     "home": "Leeds",
+     "away": "Man United",
+     "homeCode": "LEE",
+     "awayCode": "MUN",
+     "date": "SUN 18 OCT",
+     "venue": "Elland Road, Leeds",
+     "probs": {
+      "home": 0.263,
+      "draw": 0.305,
+      "away": 0.431
+     },
+     "lean": "Man United",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 41.1,
+     "awayPoss": 62.3,
+     "homeForm": [
+      "W",
+      "D",
+      "D",
+      "W",
+      "D"
+     ],
+     "awayForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "D"
+     ],
+     "xgEdgeTeam": "Man United",
+     "xgEdgeCode": "MUN",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Last five matches: Leeds allowed 14.6 shots per game; Man United allowed 10.6."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Across the last 6 meetings, Leeds took 0.8 points per game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Overall rating: Leeds 1481; Man United 1566."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Chance-quality rating: Leeds 1508; Man United 1537."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Recent venue form: Leeds 2.2 points per home game; Man United 1.2 per away game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Leeds 1.8 points per game; Man United 1.0."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Leeds are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m1-09",
+     "home": "Nott'm Forest",
+     "away": "Arsenal",
+     "homeCode": "NFO",
+     "awayCode": "ARS",
+     "date": "SUN 18 OCT",
+     "venue": "City Ground, Nottingham",
+     "probs": {
+      "home": 0.296,
+      "draw": 0.253,
+      "away": 0.451
+     },
+     "lean": "Arsenal",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 42.6,
+     "awayPoss": 59.8,
+     "homeForm": [
+      "L",
+      "D",
+      "D",
+      "W",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Arsenal",
+     "xgEdgeCode": "ARS",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.8,
+       "detail": "Recent venue form: Nott'm Forest 0.6 points per home game; Arsenal 2.4 per away game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Strong edge",
+       "weight": 1.5,
+       "detail": "Chance-quality rating: Nott'm Forest 1497; Arsenal 1600."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.4,
+       "detail": "Last five matches: Nott'm Forest 1.0 points per game; Arsenal 2.4."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Strong edge",
+       "weight": 1.4,
+       "detail": "Overall rating: Nott'm Forest 1509; Arsenal 1685."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Nott'm Forest are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m1-10",
+     "home": "Tottenham",
+     "away": "Coventry",
+     "homeCode": "TOT",
+     "awayCode": "COV",
+     "date": "MON 19 OCT",
+     "venue": "Tottenham Hotspur Stadium",
+     "probs": {
+      "home": 0.442,
+      "draw": 0.242,
+      "away": 0.316
+     },
+     "lean": "Tottenham",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 58.9,
+     "awayPoss": 42.3,
+     "homeForm": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "L",
+      "L",
+      "W"
+     ],
+     "xgEdgeTeam": "Coventry",
+     "xgEdgeCode": "COV",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Small edge",
+       "weight": 0.5,
+       "detail": "Last five matches: Tottenham allowed 15.2 shots per game; Coventry allowed 17.4."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Tottenham are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Overall rating: Tottenham 1443; Coventry 1475."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Tottenham 0.4 points per game; Coventry 0.6."
+      }
+     ]
+    }
+   ]
+  },
+  "MD2": {
+   "dateRange": "23 \u2013 25 OCT 2026",
+   "matches": [
+    {
+     "id": "m2-01",
+     "home": "Ipswich",
+     "away": "Nott'm Forest",
+     "homeCode": "IPS",
+     "awayCode": "NFO",
+     "date": "FRI 23 OCT",
+     "venue": "Portman Road, Ipswich",
+     "probs": {
+      "home": 0.329,
+      "draw": 0.277,
+      "away": 0.394
+     },
+     "lean": "Nott'm Forest",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 40.7,
+     "awayPoss": 42.6,
+     "homeForm": [
+      "W",
+      "L",
+      "L",
+      "W",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "D",
+      "D",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Nott'm Forest",
+     "xgEdgeCode": "NFO",
+     "pro": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Strong edge",
+       "weight": 1.7,
+       "detail": "Across the last 2 meetings, Ipswich took 0.0 points per game."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Strong edge",
+       "weight": 1.5,
+       "detail": "Last five matches: Ipswich allowed 17.2 shots per game; Nott'm Forest allowed 10.4."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.4,
+       "detail": "Recent venue form: Ipswich 0.6 points per home game; Nott'm Forest 2.0 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Overall rating: Ipswich 1395; Nott'm Forest 1509."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Ipswich 1.2 points per game; Nott'm Forest 1.0."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Ipswich are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m2-02",
+     "home": "Aston Villa",
+     "away": "Man City",
+     "homeCode": "AVL",
+     "awayCode": "MCI",
+     "date": "SAT 24 OCT",
+     "venue": "Villa Park, Birmingham",
+     "probs": {
+      "home": 0.246,
+      "draw": 0.288,
+      "away": 0.467
+     },
+     "lean": "Man City",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 46.6,
+     "awayPoss": 71.9,
+     "homeForm": [
+      "L",
+      "L",
+      "D",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+     ],
+     "xgEdgeTeam": "Man City",
+     "xgEdgeCode": "MCI",
+     "pro": [
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 2.2,
+       "detail": "Last five matches: Aston Villa 0.8 points per game; Man City 3.0."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Overall rating: Aston Villa 1541; Man City 1696."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Chance-quality rating: Aston Villa 1501; Man City 1572."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Recent venue form: Aston Villa 1.2 points per home game; Man City 2.2 per away game."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Across the last 6 meetings, Aston Villa took 2.0 points per game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Aston Villa are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m2-03",
+     "home": "Coventry",
+     "away": "Fulham",
+     "homeCode": "COV",
+     "awayCode": "FUL",
+     "date": "SAT 24 OCT",
+     "venue": "Coventry Building Society Arena",
+     "probs": {
+      "home": 0.354,
+      "draw": 0.242,
+      "away": 0.403
+     },
+     "lean": "Fulham",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 42.3,
+     "awayPoss": 61.6,
+     "homeForm": [
+      "L",
+      "L",
+      "L",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "L",
+      "D",
+      "D"
+     ],
+     "xgEdgeTeam": "Coventry",
+     "xgEdgeCode": "COV",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Recent venue form: Coventry 0.0 points per home game; Fulham 0.6 per away game."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Coventry allowed 17.4 shots per game; Fulham allowed 16.6."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Coventry 0.6 points per game; Fulham 0.4."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Coventry are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m2-04",
+     "home": "Arsenal",
+     "away": "Everton",
+     "homeCode": "ARS",
+     "awayCode": "EVE",
+     "date": "SAT 24 OCT",
+     "venue": "Emirates Stadium, London",
+     "probs": {
+      "home": 0.496,
+      "draw": 0.207,
+      "away": 0.297
+     },
+     "lean": "Arsenal",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 59.8,
+     "awayPoss": 42.7,
+     "homeForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "xgEdgeTeam": "Arsenal",
+     "xgEdgeCode": "ARS",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 2.4,
+       "detail": "Recent venue form: Arsenal 3.0 points per home game; Everton 0.6 per away game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Strong edge",
+       "weight": 1.5,
+       "detail": "Chance-quality rating: Arsenal 1600; Everton 1499."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Strong edge",
+       "weight": 1.4,
+       "detail": "Overall rating: Arsenal 1685; Everton 1510."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Across the last 6 meetings, Arsenal took 2.3 points per game."
+      }
+     ],
+     "con": []
+    },
+    {
+     "id": "m2-05",
+     "home": "Chelsea",
+     "away": "Tottenham",
+     "homeCode": "CHE",
+     "awayCode": "TOT",
+     "date": "SAT 24 OCT",
+     "venue": "Stamford Bridge, London",
+     "probs": {
+      "home": 0.442,
+      "draw": 0.232,
+      "away": 0.327
+     },
+     "lean": "Chelsea",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 36.5,
+     "awayPoss": 58.9,
+     "homeForm": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "L"
+     ],
+     "xgEdgeTeam": "Chelsea",
+     "xgEdgeCode": "CHE",
+     "pro": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Strong edge",
+       "weight": 1.7,
+       "detail": "Across the last 6 meetings, Chelsea took 3.0 points per game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Last five matches: Chelsea 1.4 points per game; Tottenham 0.4."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Overall rating: Chelsea 1537; Tottenham 1443."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Chance-quality rating: Chelsea 1520; Tottenham 1494."
+      }
+     ],
+     "con": []
+    },
+    {
+     "id": "m2-06",
+     "home": "Liverpool",
+     "away": "Brighton",
+     "homeCode": "LIV",
+     "awayCode": "BHA",
+     "date": "SUN 25 OCT",
+     "venue": "Anfield, Liverpool",
+     "probs": {
+      "home": 0.442,
+      "draw": 0.231,
+      "away": 0.327
+     },
+     "lean": "Liverpool",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 61.7,
+     "awayPoss": 71.4,
+     "homeForm": [
+      "D",
+      "D",
+      "W",
+      "D",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "L",
+      "D",
+      "W",
+      "W"
+     ],
+     "xgEdgeTeam": "Liverpool",
+     "xgEdgeCode": "LIV",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Recent venue form: Liverpool 1.4 points per home game; Brighton 0.8 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Overall rating: Liverpool 1621; Brighton 1582."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Across the last 6 meetings, Liverpool took 1.7 points per game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Chance-quality rating: Liverpool 1548; Brighton 1537."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Liverpool 1.8 points per game; Brighton 2.0."
+      }
+     ]
+    },
+    {
+     "id": "m2-07",
+     "home": "Man United",
+     "away": "Bournemouth",
+     "homeCode": "MUN",
+     "awayCode": "BOU",
+     "date": "SUN 25 OCT",
+     "venue": "Old Trafford, Manchester",
+     "probs": {
+      "home": 0.403,
+      "draw": 0.271,
+      "away": 0.326
+     },
+     "lean": "Man United",
+     "leanConfidence": "CLOSE CALL",
+     "homePoss": 62.3,
+     "awayPoss": 45.1,
+     "homeForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "D"
+     ],
+     "awayForm": [
+      "L",
+      "D",
+      "D",
+      "D",
+      "L"
+     ],
+     "xgEdgeTeam": "Man United",
+     "xgEdgeCode": "MUN",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Recent venue form: Man United 2.4 points per home game; Bournemouth 1.6 per away game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Man United 1.0 points per game; Bournemouth 0.6."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Overall rating: Man United 1566; Bournemouth 1545."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Man United are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Across the last 6 meetings, Man United took 0.7 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m2-08",
+     "home": "Crystal Palace",
+     "away": "Newcastle",
+     "homeCode": "CRY",
+     "awayCode": "NEW",
+     "date": "SUN 25 OCT",
+     "venue": "Selhurst Park, London",
+     "probs": {
+      "home": 0.486,
+      "draw": 0.2,
+      "away": 0.314
+     },
+     "lean": "Crystal Palace",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 40.6,
+     "awayPoss": 46.4,
+     "homeForm": [
+      "L",
+      "L",
+      "W",
+      "L",
+      "D"
+     ],
+     "awayForm": [
+      "D",
+      "W",
+      "D",
+      "L",
+      "W"
+     ],
+     "xgEdgeTeam": "Crystal Palace",
+     "xgEdgeCode": "CRY",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Last five matches: Crystal Palace allowed 16.8 shots per game; Newcastle allowed 19.6."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Crystal Palace are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Crystal Palace 0.8 points per game; Newcastle 1.6."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Recent venue form: Crystal Palace 0.4 points per home game; Newcastle 0.8 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Overall rating: Crystal Palace 1480; Newcastle 1531."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Across the last 6 meetings, Crystal Palace took 1.2 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m2-09",
+     "home": "Hull",
+     "away": "Brentford",
+     "homeCode": "HUL",
+     "awayCode": "BRE",
+     "date": "SUN 25 OCT",
+     "venue": "MKM Stadium, Hull",
+     "probs": {
+      "home": 0.302,
+      "draw": 0.277,
+      "away": 0.421
+     },
+     "lean": "Brentford",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 28.7,
+     "awayPoss": 47.6,
+     "homeForm": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "xgEdgeTeam": "Brentford",
+     "xgEdgeCode": "BRE",
+     "pro": [
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Chance-quality rating: Hull 1497; Brentford 1519."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Overall rating: Hull 1514; Brentford 1552."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Hull 1.6 points per game; Brentford 1.8."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.4,
+       "detail": "Recent venue form: Hull 2.0 points per home game; Brentford 0.6 per away game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Hull are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m2-10",
+     "home": "Sunderland",
+     "away": "Leeds",
+     "homeCode": "SUN",
+     "awayCode": "LEE",
+     "date": "SUN 25 OCT",
+     "venue": "Stadium of Light, Sunderland",
+     "probs": {
+      "home": 0.421,
+      "draw": 0.254,
+      "away": 0.325
+     },
+     "lean": "Sunderland",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 51.5,
+     "awayPoss": 41.1,
+     "homeForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "D",
+      "D",
+      "W",
+      "D"
+     ],
+     "xgEdgeTeam": "Leeds",
+     "xgEdgeCode": "LEE",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Last five matches: Sunderland allowed 12.0 shots per game; Leeds allowed 14.6."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Across the last 2 meetings, Sunderland took 2.0 points per game."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Recent venue form: Sunderland 1.4 points per home game; Leeds 1.2 per away game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Sunderland are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Last five matches: Sunderland 0.8 points per game; Leeds 1.8."
+      }
+     ]
+    }
+   ]
+  },
+  "MD3": {
+   "dateRange": "31 OCT \u2013 02 NOV 2026",
+   "matches": [
+    {
+     "id": "m3-01",
+     "home": "Chelsea",
+     "away": "Man United",
+     "homeCode": "CHE",
+     "awayCode": "MUN",
+     "date": "SAT 31 OCT",
+     "venue": "Stamford Bridge, London",
+     "probs": {
+      "home": 0.276,
+      "draw": 0.26,
+      "away": 0.464
+     },
+     "lean": "Man United",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 36.5,
+     "awayPoss": 62.3,
+     "homeForm": [
+      "W",
+      "W",
+      "L",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "D"
+     ],
+     "xgEdgeTeam": "Man United",
+     "xgEdgeCode": "MUN",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Chelsea allowed 14.4 shots per game; Man United allowed 10.6."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Across the last 6 meetings, Chelsea took 1.2 points per game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Chance-quality rating: Chelsea 1520; Man United 1537."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Overall rating: Chelsea 1537; Man United 1566."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Chelsea 1.4 points per game; Man United 1.0."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Recent venue form: Chelsea 1.4 points per home game; Man United 1.2 per away game."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Chelsea are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m3-02",
+     "home": "Coventry",
+     "away": "Sunderland",
+     "homeCode": "COV",
+     "awayCode": "SUN",
+     "date": "SAT 31 OCT",
+     "venue": "Coventry Building Society Arena",
+     "probs": {
+      "home": 0.367,
+      "draw": 0.24,
+      "away": 0.393
+     },
+     "lean": "Sunderland",
+     "leanConfidence": "AWAY FAVORITE",
+     "homePoss": 42.3,
+     "awayPoss": 51.5,
+     "homeForm": [
+      "L",
+      "L",
+      "L",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "W",
+      "D",
+      "L",
+      "L"
+     ],
+     "xgEdgeTeam": "Sunderland",
+     "xgEdgeCode": "SUN",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Last five matches: Coventry allowed 17.4 shots per game; Sunderland allowed 12.0."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Recent venue form: Coventry 0.0 points per home game; Sunderland 1.0 per away game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Coventry 0.6 points per game; Sunderland 0.8."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Coventry are playing at home."
+      }
+     ]
+    },
+    {
+     "id": "m3-03",
+     "home": "Hull",
+     "away": "Ipswich",
+     "homeCode": "HUL",
+     "awayCode": "IPS",
+     "date": "SAT 31 OCT",
+     "venue": "MKM Stadium, Hull",
+     "probs": {
+      "home": 0.461,
+      "draw": 0.247,
+      "away": 0.292
+     },
+     "lean": "Hull",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 28.7,
+     "awayPoss": 40.7,
+     "homeForm": [
+      "W",
+      "W",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "L",
+      "L",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Hull",
+     "xgEdgeCode": "HUL",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Recent venue form: Hull 2.0 points per home game; Ipswich 0.8 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Overall rating: Hull 1514; Ipswich 1395."
+      },
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Last five matches: Hull allowed 13.8 shots per game; Ipswich allowed 17.2."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Chance-quality rating: Hull 1497; Ipswich 1455."
+      }
+     ],
+     "con": []
+    },
+    {
+     "id": "m3-04",
+     "home": "Man City",
+     "away": "Brighton",
+     "homeCode": "MCI",
+     "awayCode": "BHA",
+     "date": "SAT 31 OCT",
+     "venue": "Etihad Stadium, Manchester",
+     "probs": {
+      "home": 0.38,
+      "draw": 0.29,
+      "away": 0.33
+     },
+     "lean": "Man City",
+     "leanConfidence": "CLOSE CALL",
+     "homePoss": 71.9,
+     "awayPoss": 71.4,
+     "homeForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "L",
+      "D",
+      "W",
+      "W"
+     ],
+     "xgEdgeTeam": "Man City",
+     "xgEdgeCode": "MCI",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.6,
+       "detail": "Recent venue form: Man City 2.4 points per home game; Brighton 0.8 per away game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Last five matches: Man City 3.0 points per game; Brighton 2.0."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.9,
+       "detail": "Overall rating: Man City 1696; Brighton 1582."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Clear edge",
+       "weight": 0.5,
+       "detail": "Chance-quality rating: Man City 1572; Brighton 1537."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Across the last 6 meetings, Man City took 1.3 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m3-05",
+     "home": "Bournemouth",
+     "away": "Leeds",
+     "homeCode": "BOU",
+     "awayCode": "LEE",
+     "date": "SAT 31 OCT",
+     "venue": "Vitality Stadium, Bournemouth",
+     "probs": {
+      "home": 0.532,
+      "draw": 0.218,
+      "away": 0.25
+     },
+     "lean": "Bournemouth",
+     "leanConfidence": "HIGH CONVICTION",
+     "homePoss": 45.1,
+     "awayPoss": 41.1,
+     "homeForm": [
+      "L",
+      "D",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "W",
+      "D",
+      "D",
+      "W",
+      "D"
+     ],
+     "xgEdgeTeam": "Bournemouth",
+     "xgEdgeCode": "BOU",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Bournemouth allowed 10.8 shots per game; Leeds allowed 14.6."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.5,
+       "detail": "Overall rating: Bournemouth 1545; Leeds 1481."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Chance-quality rating: Bournemouth 1536; Leeds 1508."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Bournemouth are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Strong edge",
+       "weight": 1.2,
+       "detail": "Last five matches: Bournemouth 0.6 points per game; Leeds 1.8."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Across the last 4 meetings, Bournemouth took 1.2 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m3-06",
+     "home": "Brentford",
+     "away": "Nott'm Forest",
+     "homeCode": "BRE",
+     "awayCode": "NFO",
+     "date": "SAT 31 OCT",
+     "venue": "Gtech Community Stadium",
+     "probs": {
+      "home": 0.366,
+      "draw": 0.282,
+      "away": 0.352
+     },
+     "lean": "Brentford",
+     "leanConfidence": "CLOSE CALL",
+     "homePoss": 47.6,
+     "awayPoss": 42.6,
+     "homeForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "D",
+      "D",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Brentford",
+     "xgEdgeCode": "BRE",
+     "pro": [
+      {
+       "factor": "Recent results",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Last five matches: Brentford 1.8 points per game; Nott'm Forest 1.0."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Overall rating: Brentford 1552; Nott'm Forest 1509."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Chance-quality rating: Brentford 1519; Nott'm Forest 1497."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Recent venue form: Brentford 2.2 points per home game; Nott'm Forest 2.0 per away game."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Last five matches: Brentford allowed 13.4 shots per game; Nott'm Forest allowed 10.4."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Across the last 6 meetings, Brentford took 1.2 points per game."
+      }
+     ]
+    },
+    {
+     "id": "m3-07",
+     "home": "Tottenham",
+     "away": "Crystal Palace",
+     "homeCode": "TOT",
+     "awayCode": "CRY",
+     "date": "SAT 31 OCT",
+     "venue": "Tottenham Hotspur Stadium",
+     "probs": {
+      "home": 0.371,
+      "draw": 0.265,
+      "away": 0.364
+     },
+     "lean": "Tottenham",
+     "leanConfidence": "CLOSE CALL",
+     "homePoss": 58.9,
+     "awayPoss": 40.6,
+     "homeForm": [
+      "L",
+      "L",
+      "D",
+      "D",
+      "L"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "W",
+      "L",
+      "D"
+     ],
+     "xgEdgeTeam": "Crystal Palace",
+     "xgEdgeCode": "CRY",
+     "pro": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Tottenham allowed 15.2 shots per game; Crystal Palace allowed 16.8."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Tottenham are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Tottenham 0.4 points per game; Crystal Palace 0.8."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.3,
+       "detail": "Overall rating: Tottenham 1443; Crystal Palace 1480."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Chance-quality rating: Tottenham 1494; Crystal Palace 1504."
+      }
+     ]
+    },
+    {
+     "id": "m3-08",
+     "home": "Aston Villa",
+     "away": "Fulham",
+     "homeCode": "AVL",
+     "awayCode": "FUL",
+     "date": "SAT 31 OCT",
+     "venue": "Villa Park, Birmingham",
+     "probs": {
+      "home": 0.427,
+      "draw": 0.221,
+      "away": 0.352
+     },
+     "lean": "Aston Villa",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 46.6,
+     "awayPoss": 61.6,
+     "homeForm": [
+      "L",
+      "L",
+      "D",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "L",
+      "L",
+      "L",
+      "D",
+      "D"
+     ],
+     "xgEdgeTeam": "Aston Villa",
+     "xgEdgeCode": "AVL",
+     "pro": [
+      {
+       "factor": "Head-to-head record",
+       "strength": "Strong edge",
+       "weight": 1.1,
+       "detail": "Across the last 6 meetings, Aston Villa took 2.5 points per game."
+      },
+      {
+       "factor": "Home and away form",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Recent venue form: Aston Villa 1.2 points per home game; Fulham 0.6 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Overall rating: Aston Villa 1541; Fulham 1486."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.4,
+       "detail": "Last five matches: Aston Villa 0.8 points per game; Fulham 0.4."
+      }
+     ],
+     "con": []
+    },
+    {
+     "id": "m3-09",
+     "home": "Liverpool",
+     "away": "Arsenal",
+     "homeCode": "LIV",
+     "awayCode": "ARS",
+     "date": "SUN 01 NOV",
+     "venue": "Anfield, Liverpool",
+     "probs": {
+      "home": 0.396,
+      "draw": 0.222,
+      "away": 0.382
+     },
+     "lean": "Liverpool",
+     "leanConfidence": "CLOSE CALL",
+     "homePoss": 61.7,
+     "awayPoss": 59.8,
+     "homeForm": [
+      "D",
+      "D",
+      "W",
+      "D",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "W",
+      "W",
+      "W",
+      "L"
+     ],
+     "xgEdgeTeam": "Arsenal",
+     "xgEdgeCode": "ARS",
+     "pro": [
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Liverpool are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.0,
+       "detail": "Recent venue form: Liverpool 1.4 points per home game; Arsenal 2.4 per away game."
+      },
+      {
+       "factor": "Underlying chance quality",
+       "strength": "Clear edge",
+       "weight": 0.8,
+       "detail": "Chance-quality rating: Liverpool 1548; Arsenal 1600."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Clear edge",
+       "weight": 0.6,
+       "detail": "Last five matches: Liverpool 1.8 points per game; Arsenal 2.4."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Clear edge",
+       "weight": 0.5,
+       "detail": "Overall rating: Liverpool 1621; Arsenal 1685."
+      }
+     ]
+    },
+    {
+     "id": "m3-10",
+     "home": "Newcastle",
+     "away": "Everton",
+     "homeCode": "NEW",
+     "awayCode": "EVE",
+     "date": "MON 02 NOV",
+     "venue": "St. James' Park, Newcastle",
+     "probs": {
+      "home": 0.44,
+      "draw": 0.246,
+      "away": 0.314
+     },
+     "lean": "Newcastle",
+     "leanConfidence": "SOLID LEAN",
+     "homePoss": 46.4,
+     "awayPoss": 42.7,
+     "homeForm": [
+      "D",
+      "W",
+      "D",
+      "L",
+      "W"
+     ],
+     "awayForm": [
+      "W",
+      "D",
+      "D",
+      "D",
+      "W"
+     ],
+     "xgEdgeTeam": "Newcastle",
+     "xgEdgeCode": "NEW",
+     "pro": [
+      {
+       "factor": "Home and away form",
+       "strength": "Strong edge",
+       "weight": 1.6,
+       "detail": "Recent venue form: Newcastle 2.2 points per home game; Everton 0.6 per away game."
+      },
+      {
+       "factor": "Overall team strength",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Overall rating: Newcastle 1531; Everton 1510."
+      },
+      {
+       "factor": "Home setting",
+       "strength": "Small edge",
+       "weight": 0.1,
+       "detail": "Newcastle are playing at home."
+      }
+     ],
+     "con": [
+      {
+       "factor": "Recent defensive shot prevention",
+       "strength": "Strong edge",
+       "weight": 1.3,
+       "detail": "Last five matches: Newcastle allowed 19.6 shots per game; Everton allowed 13.8."
+      },
+      {
+       "factor": "Head-to-head record",
+       "strength": "Clear edge",
+       "weight": 0.7,
+       "detail": "Across the last 6 meetings, Newcastle took 0.8 points per game."
+      },
+      {
+       "factor": "Recent results",
+       "strength": "Small edge",
+       "weight": 0.2,
+       "detail": "Last five matches: Newcastle 1.6 points per game; Everton 1.8."
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

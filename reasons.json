@@ -1,0 +1,1317 @@
+[
+ {
+  "matchday": 1,
+  "match": "Everton vs Chelsea",
+  "pick": "Everton",
+  "pick_prob": 0.447,
+  "home": "Everton",
+  "away": "Chelsea",
+  "challenger": "Chelsea",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Recent venue form: Everton 1.6 points per home game; Chelsea 0.8 per away game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Everton 1.8 points per game; Chelsea 1.4."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Everton are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Across the last 6 meetings, Everton took 1.2 points per game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Chance-quality rating: Everton 1499; Chelsea 1520."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Overall rating: Everton 1510; Chelsea 1537."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Fulham vs Hull",
+  "pick": "Fulham",
+  "pick_prob": 0.447,
+  "home": "Fulham",
+  "away": "Hull",
+  "challenger": "Hull",
+  "pro": [
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Fulham are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Last five matches: Fulham 0.4 points per game; Hull 1.6."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Last five matches: Fulham allowed 16.6 shots per game; Hull allowed 13.8."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.5,
+    "detail": "Recent venue form: Fulham 0.8 points per home game; Hull 1.3 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Overall rating: Fulham 1486; Hull 1514."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Brentford vs Liverpool",
+  "pick": "Liverpool",
+  "pick_prob": 0.412,
+  "home": "Brentford",
+  "away": "Liverpool",
+  "challenger": "Brentford",
+  "pro": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Across the last 6 meetings, Brentford took 0.7 points per game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.5,
+    "detail": "Overall rating: Brentford 1552; Liverpool 1621."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Chance-quality rating: Brentford 1519; Liverpool 1548."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Brentford allowed 13.4 shots per game; Liverpool allowed 11.6."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Recent venue form: Brentford 2.2 points per home game; Liverpool 1.4 per away game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Brentford are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Man City vs Ipswich",
+  "pick": "Man City",
+  "pick_prob": 0.593,
+  "home": "Man City",
+  "away": "Ipswich",
+  "challenger": "Ipswich",
+  "pro": [
+   {
+    "factor": "Overall team strength",
+    "strength": "Strong edge",
+    "weight": 2.3,
+    "detail": "Overall rating: Man City 1696; Ipswich 1395."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.8,
+    "detail": "Last five matches: Man City 3.0 points per game; Ipswich 1.2."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Strong edge",
+    "weight": 1.7,
+    "detail": "Chance-quality rating: Man City 1572; Ipswich 1455."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Strong edge",
+    "weight": 1.7,
+    "detail": "Across the last 2 meetings, Man City took 3.0 points per game."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 1,
+  "match": "Newcastle vs Aston Villa",
+  "pick": "Aston Villa",
+  "pick_prob": 0.401,
+  "home": "Newcastle",
+  "away": "Aston Villa",
+  "challenger": "Newcastle",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Last five matches: Newcastle allowed 19.6 shots per game; Aston Villa allowed 16.2."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Newcastle 1.6 points per game; Aston Villa 0.8."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Recent venue form: Newcastle 2.2 points per home game; Aston Villa 1.6 per away game."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Across the last 6 meetings, Newcastle took 1.7 points per game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Newcastle are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Brighton vs Crystal Palace",
+  "pick": "Brighton",
+  "pick_prob": 0.451,
+  "home": "Brighton",
+  "away": "Crystal Palace",
+  "challenger": "Crystal Palace",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Last five matches: Brighton 2.0 points per game; Crystal Palace 0.8."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Strong edge",
+    "weight": 1.1,
+    "detail": "Last five matches: Brighton allowed 11.6 shots per game; Crystal Palace allowed 16.8."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Recent venue form: Brighton 2.0 points per home game; Crystal Palace 1.0 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Overall rating: Brighton 1582; Crystal Palace 1480."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Across the last 6 meetings, Brighton took 0.8 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Bournemouth vs Sunderland",
+  "pick": "Bournemouth",
+  "pick_prob": 0.461,
+  "home": "Bournemouth",
+  "away": "Sunderland",
+  "challenger": "Sunderland",
+  "pro": [
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Chance-quality rating: Bournemouth 1536; Sunderland 1498."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.5,
+    "detail": "Overall rating: Bournemouth 1545; Sunderland 1484."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Last five matches: Bournemouth allowed 10.8 shots per game; Sunderland allowed 12.0."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Recent venue form: Bournemouth 1.2 points per home game; Sunderland 1.0 per away game."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Strong edge",
+    "weight": 1.1,
+    "detail": "Across the last 2 meetings, Bournemouth took 0.5 points per game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Bournemouth 0.6 points per game; Sunderland 0.8."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Leeds vs Man United",
+  "pick": "Man United",
+  "pick_prob": 0.431,
+  "home": "Leeds",
+  "away": "Man United",
+  "challenger": "Leeds",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Last five matches: Leeds allowed 14.6 shots per game; Man United allowed 10.6."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Across the last 6 meetings, Leeds took 0.8 points per game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Overall rating: Leeds 1481; Man United 1566."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Chance-quality rating: Leeds 1508; Man United 1537."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Recent venue form: Leeds 2.2 points per home game; Man United 1.2 per away game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Leeds 1.8 points per game; Man United 1.0."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Leeds are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Nott'm Forest vs Arsenal",
+  "pick": "Arsenal",
+  "pick_prob": 0.451,
+  "home": "Nott'm Forest",
+  "away": "Arsenal",
+  "challenger": "Nott'm Forest",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.8,
+    "detail": "Recent venue form: Nott'm Forest 0.6 points per home game; Arsenal 2.4 per away game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Strong edge",
+    "weight": 1.5,
+    "detail": "Chance-quality rating: Nott'm Forest 1497; Arsenal 1600."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.4,
+    "detail": "Last five matches: Nott'm Forest 1.0 points per game; Arsenal 2.4."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Strong edge",
+    "weight": 1.4,
+    "detail": "Overall rating: Nott'm Forest 1509; Arsenal 1685."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Nott'm Forest are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Tottenham vs Coventry",
+  "pick": "Tottenham",
+  "pick_prob": 0.442,
+  "home": "Tottenham",
+  "away": "Coventry",
+  "challenger": "Coventry",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Small edge",
+    "weight": 0.5,
+    "detail": "Last five matches: Tottenham allowed 15.2 shots per game; Coventry allowed 17.4."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Tottenham are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Overall rating: Tottenham 1443; Coventry 1475."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Tottenham 0.4 points per game; Coventry 0.6."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Ipswich vs Nott'm Forest",
+  "pick": "Nott'm Forest",
+  "pick_prob": 0.394,
+  "home": "Ipswich",
+  "away": "Nott'm Forest",
+  "challenger": "Ipswich",
+  "pro": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Strong edge",
+    "weight": 1.7,
+    "detail": "Across the last 2 meetings, Ipswich took 0.0 points per game."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Strong edge",
+    "weight": 1.5,
+    "detail": "Last five matches: Ipswich allowed 17.2 shots per game; Nott'm Forest allowed 10.4."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.4,
+    "detail": "Recent venue form: Ipswich 0.6 points per home game; Nott'm Forest 2.0 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Overall rating: Ipswich 1395; Nott'm Forest 1509."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Ipswich 1.2 points per game; Nott'm Forest 1.0."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Ipswich are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Aston Villa vs Man City",
+  "pick": "Man City",
+  "pick_prob": 0.467,
+  "home": "Aston Villa",
+  "away": "Man City",
+  "challenger": "Aston Villa",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 2.2,
+    "detail": "Last five matches: Aston Villa 0.8 points per game; Man City 3.0."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Overall rating: Aston Villa 1541; Man City 1696."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Chance-quality rating: Aston Villa 1501; Man City 1572."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Recent venue form: Aston Villa 1.2 points per home game; Man City 2.2 per away game."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Across the last 6 meetings, Aston Villa took 2.0 points per game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Aston Villa are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Coventry vs Fulham",
+  "pick": "Fulham",
+  "pick_prob": 0.403,
+  "home": "Coventry",
+  "away": "Fulham",
+  "challenger": "Coventry",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Recent venue form: Coventry 0.0 points per home game; Fulham 0.6 per away game."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Coventry allowed 17.4 shots per game; Fulham allowed 16.6."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Coventry 0.6 points per game; Fulham 0.4."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Coventry are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Arsenal vs Everton",
+  "pick": "Arsenal",
+  "pick_prob": 0.496,
+  "home": "Arsenal",
+  "away": "Everton",
+  "challenger": "Everton",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 2.4,
+    "detail": "Recent venue form: Arsenal 3.0 points per home game; Everton 0.6 per away game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Strong edge",
+    "weight": 1.5,
+    "detail": "Chance-quality rating: Arsenal 1600; Everton 1499."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Strong edge",
+    "weight": 1.4,
+    "detail": "Overall rating: Arsenal 1685; Everton 1510."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Across the last 6 meetings, Arsenal took 2.3 points per game."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 2,
+  "match": "Chelsea vs Tottenham",
+  "pick": "Chelsea",
+  "pick_prob": 0.442,
+  "home": "Chelsea",
+  "away": "Tottenham",
+  "challenger": "Tottenham",
+  "pro": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Strong edge",
+    "weight": 1.7,
+    "detail": "Across the last 6 meetings, Chelsea took 3.0 points per game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Last five matches: Chelsea 1.4 points per game; Tottenham 0.4."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Overall rating: Chelsea 1537; Tottenham 1443."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Chance-quality rating: Chelsea 1520; Tottenham 1494."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 2,
+  "match": "Liverpool vs Brighton",
+  "pick": "Liverpool",
+  "pick_prob": 0.442,
+  "home": "Liverpool",
+  "away": "Brighton",
+  "challenger": "Brighton",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Recent venue form: Liverpool 1.4 points per home game; Brighton 0.8 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Overall rating: Liverpool 1621; Brighton 1582."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Across the last 6 meetings, Liverpool took 1.7 points per game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Chance-quality rating: Liverpool 1548; Brighton 1537."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Liverpool 1.8 points per game; Brighton 2.0."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Man United vs Bournemouth",
+  "pick": "Man United",
+  "pick_prob": 0.403,
+  "home": "Man United",
+  "away": "Bournemouth",
+  "challenger": "Bournemouth",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Recent venue form: Man United 2.4 points per home game; Bournemouth 1.6 per away game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Man United 1.0 points per game; Bournemouth 0.6."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Overall rating: Man United 1566; Bournemouth 1545."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Man United are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Across the last 6 meetings, Man United took 0.7 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Crystal Palace vs Newcastle",
+  "pick": "Crystal Palace",
+  "pick_prob": 0.486,
+  "home": "Crystal Palace",
+  "away": "Newcastle",
+  "challenger": "Newcastle",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Last five matches: Crystal Palace allowed 16.8 shots per game; Newcastle allowed 19.6."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Crystal Palace are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Crystal Palace 0.8 points per game; Newcastle 1.6."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Recent venue form: Crystal Palace 0.4 points per home game; Newcastle 0.8 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Overall rating: Crystal Palace 1480; Newcastle 1531."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Across the last 6 meetings, Crystal Palace took 1.2 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Hull vs Brentford",
+  "pick": "Brentford",
+  "pick_prob": 0.421,
+  "home": "Hull",
+  "away": "Brentford",
+  "challenger": "Hull",
+  "pro": [
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Chance-quality rating: Hull 1497; Brentford 1519."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Overall rating: Hull 1514; Brentford 1552."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Hull 1.6 points per game; Brentford 1.8."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.4,
+    "detail": "Recent venue form: Hull 2.0 points per home game; Brentford 0.6 per away game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Hull are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Sunderland vs Leeds",
+  "pick": "Sunderland",
+  "pick_prob": 0.421,
+  "home": "Sunderland",
+  "away": "Leeds",
+  "challenger": "Leeds",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Last five matches: Sunderland allowed 12.0 shots per game; Leeds allowed 14.6."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Across the last 2 meetings, Sunderland took 2.0 points per game."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Recent venue form: Sunderland 1.4 points per home game; Leeds 1.2 per away game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Sunderland are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Last five matches: Sunderland 0.8 points per game; Leeds 1.8."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Chelsea vs Man United",
+  "pick": "Man United",
+  "pick_prob": 0.464,
+  "home": "Chelsea",
+  "away": "Man United",
+  "challenger": "Chelsea",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Chelsea allowed 14.4 shots per game; Man United allowed 10.6."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Across the last 6 meetings, Chelsea took 1.2 points per game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Chance-quality rating: Chelsea 1520; Man United 1537."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Overall rating: Chelsea 1537; Man United 1566."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Chelsea 1.4 points per game; Man United 1.0."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Recent venue form: Chelsea 1.4 points per home game; Man United 1.2 per away game."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Chelsea are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Coventry vs Sunderland",
+  "pick": "Sunderland",
+  "pick_prob": 0.393,
+  "home": "Coventry",
+  "away": "Sunderland",
+  "challenger": "Coventry",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Last five matches: Coventry allowed 17.4 shots per game; Sunderland allowed 12.0."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Recent venue form: Coventry 0.0 points per home game; Sunderland 1.0 per away game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Coventry 0.6 points per game; Sunderland 0.8."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Coventry are playing at home."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Hull vs Ipswich",
+  "pick": "Hull",
+  "pick_prob": 0.461,
+  "home": "Hull",
+  "away": "Ipswich",
+  "challenger": "Ipswich",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Recent venue form: Hull 2.0 points per home game; Ipswich 0.8 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Overall rating: Hull 1514; Ipswich 1395."
+   },
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Last five matches: Hull allowed 13.8 shots per game; Ipswich allowed 17.2."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Chance-quality rating: Hull 1497; Ipswich 1455."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 3,
+  "match": "Man City vs Brighton",
+  "pick": "Man City",
+  "pick_prob": 0.38,
+  "home": "Man City",
+  "away": "Brighton",
+  "challenger": "Brighton",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.6,
+    "detail": "Recent venue form: Man City 2.4 points per home game; Brighton 0.8 per away game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Last five matches: Man City 3.0 points per game; Brighton 2.0."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.9,
+    "detail": "Overall rating: Man City 1696; Brighton 1582."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Clear edge",
+    "weight": 0.5,
+    "detail": "Chance-quality rating: Man City 1572; Brighton 1537."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Across the last 6 meetings, Man City took 1.3 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Bournemouth vs Leeds",
+  "pick": "Bournemouth",
+  "pick_prob": 0.532,
+  "home": "Bournemouth",
+  "away": "Leeds",
+  "challenger": "Leeds",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Bournemouth allowed 10.8 shots per game; Leeds allowed 14.6."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.5,
+    "detail": "Overall rating: Bournemouth 1545; Leeds 1481."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Chance-quality rating: Bournemouth 1536; Leeds 1508."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Bournemouth are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Strong edge",
+    "weight": 1.2,
+    "detail": "Last five matches: Bournemouth 0.6 points per game; Leeds 1.8."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Across the last 4 meetings, Bournemouth took 1.2 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Brentford vs Nott'm Forest",
+  "pick": "Brentford",
+  "pick_prob": 0.366,
+  "home": "Brentford",
+  "away": "Nott'm Forest",
+  "challenger": "Nott'm Forest",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Last five matches: Brentford 1.8 points per game; Nott'm Forest 1.0."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Overall rating: Brentford 1552; Nott'm Forest 1509."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Chance-quality rating: Brentford 1519; Nott'm Forest 1497."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Recent venue form: Brentford 2.2 points per home game; Nott'm Forest 2.0 per away game."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Last five matches: Brentford allowed 13.4 shots per game; Nott'm Forest allowed 10.4."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Across the last 6 meetings, Brentford took 1.2 points per game."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Tottenham vs Crystal Palace",
+  "pick": "Tottenham",
+  "pick_prob": 0.371,
+  "home": "Tottenham",
+  "away": "Crystal Palace",
+  "challenger": "Crystal Palace",
+  "pro": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Tottenham allowed 15.2 shots per game; Crystal Palace allowed 16.8."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Tottenham are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Tottenham 0.4 points per game; Crystal Palace 0.8."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.3,
+    "detail": "Overall rating: Tottenham 1443; Crystal Palace 1480."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Chance-quality rating: Tottenham 1494; Crystal Palace 1504."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Aston Villa vs Fulham",
+  "pick": "Aston Villa",
+  "pick_prob": 0.427,
+  "home": "Aston Villa",
+  "away": "Fulham",
+  "challenger": "Fulham",
+  "pro": [
+   {
+    "factor": "Head-to-head record",
+    "strength": "Strong edge",
+    "weight": 1.1,
+    "detail": "Across the last 6 meetings, Aston Villa took 2.5 points per game."
+   },
+   {
+    "factor": "Home and away form",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Recent venue form: Aston Villa 1.2 points per home game; Fulham 0.6 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Overall rating: Aston Villa 1541; Fulham 1486."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.4,
+    "detail": "Last five matches: Aston Villa 0.8 points per game; Fulham 0.4."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 3,
+  "match": "Liverpool vs Arsenal",
+  "pick": "Liverpool",
+  "pick_prob": 0.396,
+  "home": "Liverpool",
+  "away": "Arsenal",
+  "challenger": "Arsenal",
+  "pro": [
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Liverpool are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.0,
+    "detail": "Recent venue form: Liverpool 1.4 points per home game; Arsenal 2.4 per away game."
+   },
+   {
+    "factor": "Underlying chance quality",
+    "strength": "Clear edge",
+    "weight": 0.8,
+    "detail": "Chance-quality rating: Liverpool 1548; Arsenal 1600."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Clear edge",
+    "weight": 0.6,
+    "detail": "Last five matches: Liverpool 1.8 points per game; Arsenal 2.4."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Clear edge",
+    "weight": 0.5,
+    "detail": "Overall rating: Liverpool 1621; Arsenal 1685."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Newcastle vs Everton",
+  "pick": "Newcastle",
+  "pick_prob": 0.44,
+  "home": "Newcastle",
+  "away": "Everton",
+  "challenger": "Everton",
+  "pro": [
+   {
+    "factor": "Home and away form",
+    "strength": "Strong edge",
+    "weight": 1.6,
+    "detail": "Recent venue form: Newcastle 2.2 points per home game; Everton 0.6 per away game."
+   },
+   {
+    "factor": "Overall team strength",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Overall rating: Newcastle 1531; Everton 1510."
+   },
+   {
+    "factor": "Home setting",
+    "strength": "Small edge",
+    "weight": 0.1,
+    "detail": "Newcastle are playing at home."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent defensive shot prevention",
+    "strength": "Strong edge",
+    "weight": 1.3,
+    "detail": "Last five matches: Newcastle allowed 19.6 shots per game; Everton allowed 13.8."
+   },
+   {
+    "factor": "Head-to-head record",
+    "strength": "Clear edge",
+    "weight": 0.7,
+    "detail": "Across the last 6 meetings, Newcastle took 0.8 points per game."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small edge",
+    "weight": 0.2,
+    "detail": "Last five matches: Newcastle 1.6 points per game; Everton 1.8."
+   }
+  ]
+ }
+]

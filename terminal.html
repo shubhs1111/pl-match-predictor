@@ -1,0 +1,401 @@
+<title>PL Predictor Terminal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      colors: {
+        background: "#0a0e16", surface: "#0f131c", "surface-low": "#121722",
+        "surface-c": "#181d28", "surface-high": "#202634", "surface-top": "#283040",
+        "surface-lowest": "#070a10", outline: "#3b4759", "outline-v": "#222c3c",
+        primary: "#05f181", "primary-c": "#004724", secondary: "#ffb86b",
+        "on-surface": "#e2e8f0", "on-variant": "#8e9cb0", error: "#ff6b6b",
+      },
+      fontFamily: { display: ["Barlow Condensed", "sans-serif"], mono: ["JetBrains Mono", "monospace"] },
+    }},
+  };
+</script>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; padding: 0; background: #0a0e16; color: #e2e8f0; }
+  body { font-family: "JetBrains Mono", monospace; }
+  .ms { font-family: "Material Symbols Outlined"; font-weight: normal; line-height: 1; }
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #0a0e16; }
+  ::-webkit-scrollbar-thumb { background: #202634; }
+  .no-sb::-webkit-scrollbar { display: none; }
+  .pitch-grid { background-size: 22px 22px; background-image:
+    linear-gradient(to right, rgba(5,241,129,.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5,241,129,.06) 1px, transparent 1px); }
+</style>
+
+<div class="bg-background text-on-surface text-xs min-h-screen flex flex-col">
+
+  <!-- ===== HEADER / HONEST HUD ===== -->
+  <header class="w-full bg-surface-lowest border-b border-outline-v sticky top-0 z-50" style="top: env(safe-area-inset-top, 0px);">
+    <div class="px-4 py-1.5 border-b border-outline-v/60 flex flex-wrap items-center justify-between text-[11px] gap-2">
+      <div class="flex items-center gap-3 flex-wrap">
+        <div class="flex items-center gap-1.5 uppercase tracking-wider text-primary">
+          <span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-bold">PL PREDICTOR CORE</span>
+        </div>
+        <span class="text-outline hidden sm:inline">|</span>
+        <div class="hidden sm:flex items-center gap-1 text-on-variant">
+          <span class="text-on-surface">MODEL:</span><span class="text-primary font-bold">GRADIENT BOOSTING &middot; NO ODDS</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-1 text-on-variant">
+          <span class="ms text-[13px] text-primary">verified</span><span class="uppercase">Backtest:</span>
+          <span class="text-primary font-bold">47.3%</span><span class="text-[10px]">vs 44.2% baseline</span>
+        </div>
+        <span class="text-outline hidden lg:inline">|</span>
+        <div class="hidden lg:flex items-center gap-1 text-on-variant">
+          <span class="ms text-[13px]">schedule</span><span class="text-on-surface" id="clock">--:--:--</span>
+        </div>
+      </div>
+    </div>
+    <div class="px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 bg-surface-low/70">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded bg-primary-c/80 border border-primary/40 flex items-center justify-center text-primary shadow-[0_0_12px_rgba(5,241,129,.25)]">
+          <span class="ms text-[20px]">terminal</span>
+        </div>
+        <div>
+          <h1 class="font-display text-lg font-bold tracking-wider uppercase text-white leading-none m-0">Premier League Predictor // Terminal</h1>
+          <p class="text-[10px] text-on-variant leading-none mt-1">Recent form &middot; home/away record &middot; opponent-adjusted xG strength &middot; head-to-head &middot; no betting odds</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <div class="bg-surface-lowest p-0.5 border border-outline-v flex items-center rounded-sm" id="md-switch"></div>
+        <div class="relative w-40 sm:w-52">
+          <span class="ms absolute left-2 top-1.5 text-[14px] text-on-variant">search</span>
+          <input class="w-full bg-surface-lowest border border-outline-v text-on-surface text-[11px] pl-7 pr-2 py-1 uppercase rounded-sm placeholder:text-outline focus:outline-none focus:border-primary" id="search" oninput="onSearch(this.value)" placeholder="FILTER TEAM..." type="text" aria-label="Filter by team">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FIXTURE RIBBON ===== -->
+  <section class="w-full bg-surface-lowest border-b border-outline-v py-2 px-4">
+    <div class="flex items-center justify-between mb-1.5">
+      <span class="text-[10px] text-primary tracking-widest uppercase font-bold flex items-center gap-1">
+        <span class="ms text-[13px]">view_carousel</span> MATCHDAY FIXTURE RADAR <span class="text-on-variant" id="fx-count"></span>
+      </span>
+      <div class="flex items-center gap-1">
+        <button class="w-5 h-5 bg-surface-c border border-outline-v flex items-center justify-center text-on-surface hover:text-primary" onclick="ribbon(-320)" aria-label="Scroll left"><span class="ms text-[12px]">chevron_left</span></button>
+        <button class="w-5 h-5 bg-surface-c border border-outline-v flex items-center justify-center text-on-surface hover:text-primary" onclick="ribbon(320)" aria-label="Scroll right"><span class="ms text-[12px]">chevron_right</span></button>
+      </div>
+    </div>
+    <div class="flex gap-2 overflow-x-auto pb-1 scroll-smooth no-sb" id="ribbon"></div>
+  </section>
+
+  <!-- ===== MAIN SPLIT ===== -->
+  <main class="w-full flex-1 flex flex-col lg:flex-row min-h-0 bg-background">
+
+    <!-- LEFT: DEEP DIVE -->
+    <section class="w-full lg:w-[58%] lg:border-r border-outline-v p-4 flex flex-col gap-4 overflow-y-auto">
+      <div class="bg-surface-low border border-outline-v rounded-sm p-4 relative overflow-hidden">
+        <div class="absolute -right-8 -bottom-10 opacity-5 pointer-events-none"><span class="ms text-[180px]">sports_soccer</span></div>
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-outline-v/60 pb-3">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[10px] bg-primary text-black font-extrabold px-1.5 py-0.5 rounded-sm uppercase tracking-wider">Match Inspector</span>
+            <span class="text-on-variant text-[11px]" id="d-date"></span><span class="text-outline">/</span>
+            <span class="text-on-variant text-[11px]" id="d-venue"></span>
+          </div>
+          <div id="d-conf"></div>
+        </div>
+
+        <!-- Teams -->
+        <div class="grid grid-cols-12 items-center py-4 gap-2">
+          <div class="col-span-5 flex items-center gap-3">
+            <div class="w-12 h-12 shrink-0 bg-surface-high border-2 flex items-center justify-center font-display text-2xl font-bold" id="d-h-badge"></div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5 flex-wrap"><h2 class="font-display text-xl sm:text-2xl font-extrabold uppercase text-white leading-none m-0" id="d-h-name"></h2>
+                <span class="text-[10px] text-on-variant border border-outline-v px-1">HOME</span></div>
+              <div class="flex items-center gap-0.5 mt-1.5" id="d-h-form"></div>
+            </div>
+          </div>
+          <div class="col-span-2 flex flex-col items-center justify-center text-center">
+            <span class="font-display text-xl font-bold text-outline">VS</span>
+            <span class="text-[9px] text-primary uppercase font-bold tracking-widest mt-0.5" id="d-xg"></span>
+          </div>
+          <div class="col-span-5 flex items-center justify-end gap-3 text-right">
+            <div class="min-w-0">
+              <div class="flex items-center justify-end gap-1.5 flex-wrap"><span class="text-[10px] text-on-variant border border-outline-v px-1">AWAY</span>
+                <h2 class="font-display text-xl sm:text-2xl font-extrabold uppercase text-white leading-none m-0" id="d-a-name"></h2></div>
+              <div class="flex items-center justify-end gap-0.5 mt-1.5" id="d-a-form"></div>
+            </div>
+            <div class="w-12 h-12 shrink-0 bg-surface-high border-2 flex items-center justify-center font-display text-2xl font-bold" id="d-a-badge"></div>
+          </div>
+        </div>
+
+        <!-- Prob bar -->
+        <div class="bg-surface-lowest p-3 border border-outline-v rounded-sm">
+          <div class="flex justify-between items-baseline mb-1 text-[11px]" id="d-prob-legend"></div>
+          <div class="w-full h-3.5 bg-surface-high flex overflow-hidden border border-outline-v" id="d-bar"></div>
+          <div class="flex items-center justify-between mt-2 pt-1 border-t border-outline-v/40 text-[10px]">
+            <div class="flex items-center gap-2"><span class="text-on-variant uppercase">Model lean:</span>
+              <span class="font-bold text-primary px-1.5 py-0.5 bg-primary/10 border border-primary/30" id="d-lean"></span></div>
+            <span class="text-on-variant" id="d-conf-note"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reasoning: real pro/con -->
+      <div class="bg-surface-low border border-outline-v p-4 rounded-sm">
+        <div class="flex items-center justify-between mb-3 pb-1.5 border-b border-outline-v/60">
+          <span class="text-[10px] text-white uppercase tracking-wider font-bold flex items-center gap-1"><span class="ms text-[16px] text-primary">psychology</span> Why the model leans this way</span>
+          <span class="text-[9px] text-on-variant">Measured from the model itself</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div><div class="text-[10px] text-primary uppercase font-bold mb-2 flex items-center gap-1"><span class="w-2 h-2 bg-primary inline-block"></span><span id="pro-title">Why pick</span></div><div class="space-y-2" id="d-pro"></div></div>
+          <div><div class="text-[10px] text-secondary uppercase font-bold mb-2 flex items-center gap-1"><span class="w-2 h-2 bg-secondary inline-block"></span><span id="con-title">What points the other way</span></div><div class="space-y-2" id="d-con"></div></div>
+        </div>
+      </div>
+
+      <!-- Possession (context only) -->
+      <div class="bg-surface-low border border-outline-v p-3 rounded-sm">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] text-white uppercase tracking-wider font-bold flex items-center gap-1"><span class="ms text-[15px] text-secondary">donut_small</span> Possession (season avg)</span>
+          <span class="text-[9px] text-secondary">CONTEXT ONLY &mdash; EXCLUDED FROM MODEL</span>
+        </div>
+        <div class="flex justify-between text-[11px] mb-1"><span id="d-h-poss-l" class="text-white font-bold"></span><span id="d-a-poss-l" class="text-white font-bold"></span></div>
+        <div class="w-full h-3 flex overflow-hidden rounded-xs border border-outline-v" id="d-poss-bar"></div>
+        <p class="text-[10px] text-on-variant mt-2 leading-tight">Possession was tested as a feature and left out &mdash; it didn't improve accuracy over the xG-strength rating.</p>
+      </div>
+    </section>
+
+    <!-- RIGHT: MATRIX -->
+    <aside class="w-full lg:w-[42%] flex flex-col bg-surface-lowest overflow-y-auto">
+      <div class="p-3 bg-surface-low border-b border-outline-v sticky top-0 z-20">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-display text-base font-bold uppercase text-white m-0 tracking-wide flex items-center gap-1.5"><span class="ms text-[16px] text-primary">grid_view</span> Match Matrix</h3>
+          <span class="text-[10px] text-on-variant" id="show-count"></span>
+        </div>
+        <div class="flex flex-wrap gap-1" id="filters"></div>
+      </div>
+      <div class="p-3 space-y-2 flex-1" id="match-list"></div>
+      <div class="hidden p-8 text-center flex-col items-center justify-center" id="empty">
+        <span class="ms text-[36px] text-outline mb-2">filter_alt_off</span>
+        <span class="font-display uppercase text-on-surface">No matches</span>
+        <p class="text-on-variant text-[11px] mt-1">Nothing matches the current filter.</p>
+        <button class="mt-2 text-[10px] px-3 py-1 bg-primary text-black font-bold uppercase" onclick="setFilter('all')">Reset</button>
+      </div>
+
+      <!-- Possession benchmark -->
+      <div class="p-3 border-t border-outline-v bg-surface-low">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-[10px] text-white uppercase font-bold tracking-wider flex items-center gap-1"><span class="w-2 h-2 bg-secondary inline-block"></span> Possession benchmark</span>
+          <span class="text-[9px] text-secondary">EXCLUDED FROM MODEL</span>
+        </div>
+        <div class="grid grid-cols-5 gap-1 text-[10px]" id="poss-strip"></div>
+      </div>
+
+      <!-- Backtest audit (honest) -->
+      <div class="p-3 border-t border-outline-v bg-surface-lowest">
+        <div class="flex items-center gap-1.5 mb-2">
+          <span class="ms text-[15px] text-primary">policy</span>
+          <span class="text-[10px] text-primary uppercase font-bold tracking-wider">Backtest &amp; honesty audit</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="bg-surface-c p-2 border border-outline-v rounded-xs"><span class="text-[9px] text-on-variant block uppercase">Accuracy</span><span class="text-primary font-bold text-sm block mt-0.5">47.3%</span><span class="text-[9px] text-on-variant">1,900 matches</span></div>
+          <div class="bg-surface-c p-2 border border-outline-v rounded-xs"><span class="text-[9px] text-on-variant block uppercase">Baseline</span><span class="text-white font-bold text-sm block mt-0.5">44.2%</span><span class="text-[9px] text-on-variant">always home</span></div>
+          <div class="bg-surface-c p-2 border border-outline-v rounded-xs"><span class="text-[9px] text-on-variant block uppercase">Trained</span><span class="text-secondary font-bold text-sm block mt-0.5">6</span><span class="text-[9px] text-on-variant">seasons</span></div>
+        </div>
+        <p class="text-[10px] text-on-variant mt-2 leading-tight">Football is high-variance: single-match leans are relative edges, not certainties. Possession, big chances and Opta xG were all tested and excluded &mdash; no gain over the features kept.</p>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<script>
+  let DATA = null, md = "MD1", active = null, filter = "all", query = "";
+
+  const pct = x => (x * 100).toFixed(1);
+  const pct0 = x => Math.round(x * 100);
+  const pickIsHome = m => m.probs.home >= m.probs.away;
+
+  function confTag(c) {
+    const map = {
+      "HIGH CONVICTION": "bg-primary text-black font-extrabold",
+      "SOLID LEAN": "bg-primary/20 border border-primary/40 text-primary font-bold",
+      "AWAY FAVORITE": "bg-secondary/20 border border-secondary/40 text-secondary font-bold",
+      "CLOSE CALL": "bg-surface-high border border-outline text-on-surface font-bold",
+    };
+    return `<span class="text-[9px] px-1.5 py-0.5 rounded-xs tracking-wider uppercase ${map[c] || map['CLOSE CALL']}">${c}</span>`;
+  }
+  function formBadges(arr) {
+    return (arr || []).map(r => {
+      const cls = r === 'W' ? 'bg-primary text-black' : r === 'D' ? 'bg-surface-top text-white' : 'bg-error text-white';
+      return `<span class="w-3.5 h-3.5 inline-flex items-center justify-center text-[8px] font-bold rounded-xs ${cls}">${r}</span>`;
+    }).join('');
+  }
+  // Colour by prediction: pick = green, other team = amber, draw = grey.
+  function barSegs(m) {
+    const h = pickIsHome(m);
+    const hc = h ? 'bg-primary' : 'bg-secondary';
+    const ac = h ? 'bg-secondary' : 'bg-primary';
+    return `<div class="h-full ${hc}" style="width:${m.probs.home*100}%"></div>
+            <div class="h-full bg-outline" style="width:${m.probs.draw*100}%"></div>
+            <div class="h-full ${ac}" style="width:${m.probs.away*100}%"></div>`;
+  }
+
+  function renderMdSwitch() {
+    const el = document.getElementById("md-switch");
+    el.innerHTML = Object.keys(DATA.matchdays).map(k => {
+      const on = k === md;
+      const r = DATA.matchdays[k].dateRange;
+      return `<button onclick="switchMd('${k}')" class="px-3 py-1 text-[11px] uppercase transition-all ${on ? 'bg-primary text-black font-bold shadow-[0_0_8px_rgba(5,241,129,.3)]' : 'text-on-variant hover:text-white'}">${k.replace('MD','MD ')} <span class="opacity-70 font-normal text-[9px]">(${r.replace(' 2026','')})</span></button>`;
+    }).join('');
+  }
+
+  function renderRibbon() {
+    const ms = DATA.matchdays[md].matches;
+    document.getElementById("fx-count").innerText = `(${ms.length} FIXTURES)`;
+    document.getElementById("ribbon").innerHTML = ms.map(m => {
+      const on = m.id === active;
+      const h = pickIsHome(m);
+      return `<div onclick="select('${m.id}')" class="cursor-pointer shrink-0 w-48 p-2 border transition-all ${on ? 'bg-surface-high border-primary shadow-[0_0_12px_rgba(5,241,129,.25)]' : 'bg-surface-low border-outline-v hover:border-outline'}">
+        <div class="flex items-center justify-between text-[9px] text-on-variant mb-1"><span class="text-white font-bold">${m.homeCode} v ${m.awayCode}</span><span>${m.date.split(' ').slice(0,3).join(' ')}</span></div>
+        <div class="flex items-center justify-between font-display text-sm font-bold uppercase tracking-tight my-1">
+          <span class="${h ? 'text-primary' : 'text-white'}">${m.home}</span><span class="text-[10px] text-outline">v</span><span class="${!h ? 'text-primary' : 'text-white'}">${m.away}</span></div>
+        <div class="w-full h-1.5 bg-surface-high flex overflow-hidden rounded-xs mt-1.5">${barSegs(m)}</div>
+        <div class="flex items-center justify-between text-[8px] text-on-variant mt-1.5"><span>H ${pct0(m.probs.home)}%</span><span>D ${pct0(m.probs.draw)}%</span><span>A ${pct0(m.probs.away)}%</span></div>
+      </div>`;
+    }).join('');
+  }
+
+  const FILTERS = [
+    ["all", "ALL"], ["high", "STRONG LEAN &ge;45%"], ["close", "CLOSE &lt;40%"], ["away", "AWAY FAVOURED"],
+  ];
+  function matchFilter(m) {
+    const top = Math.max(m.probs.home, m.probs.draw, m.probs.away);
+    if (filter === "high") return top >= 0.45;
+    if (filter === "close") return top < 0.40;
+    if (filter === "away") return m.probs.away > m.probs.home;
+    return true;
+  }
+  function renderFilters() {
+    const ms = DATA.matchdays[md].matches;
+    const cnt = f => ms.filter(m => { const sv = filter; filter = f; const r = matchFilter(m); filter = sv; return r; }).length;
+    document.getElementById("filters").innerHTML = FILTERS.map(([k, label]) =>
+      `<button onclick="setFilter('${k}')" class="px-2 py-1 text-[10px] uppercase font-bold transition-all ${filter === k ? 'bg-primary text-black' : 'bg-surface-c text-on-variant hover:text-white'}">${label} (${cnt(k)})</button>`
+    ).join('');
+  }
+
+  function renderList() {
+    const ms = DATA.matchdays[md].matches.filter(m => {
+      const txt = `${m.home} ${m.away} ${m.homeCode} ${m.awayCode}`.toLowerCase();
+      return txt.includes(query.toLowerCase()) && matchFilter(m);
+    });
+    document.getElementById("show-count").innerText = `${ms.length}/${DATA.matchdays[md].matches.length}`;
+    const empty = document.getElementById("empty"), list = document.getElementById("match-list");
+    if (!ms.length) { list.innerHTML = ""; empty.classList.remove("hidden"); empty.classList.add("flex"); return; }
+    empty.classList.add("hidden"); empty.classList.remove("flex");
+    list.innerHTML = ms.map(m => {
+      const on = m.id === active, h = pickIsHome(m);
+      return `<div onclick="select('${m.id}')" class="p-2.5 border transition-all cursor-pointer rounded-xs ${on ? 'bg-surface-high border-primary ring-1 ring-primary' : 'bg-surface-c border-outline-v hover:border-outline'}">
+        <div class="flex items-center justify-between text-[10px] mb-1.5"><span class="text-on-variant">${m.date} &middot; ${m.homeCode} v ${m.awayCode}</span>${confTag(m.leanConfidence)}</div>
+        <div class="flex items-center justify-between font-display text-base font-bold text-white uppercase tracking-tight">
+          <span class="${h ? 'text-primary' : 'text-on-surface'}">${m.home}</span><span class="text-xs text-outline">VS</span><span class="${!h ? 'text-primary' : 'text-on-surface'}">${m.away}</span></div>
+        <div class="w-full h-2 bg-surface-high flex overflow-hidden rounded-xs my-2">${barSegs(m)}</div>
+        <div class="flex items-center justify-between text-[10px] text-on-variant"><span>H <strong class="text-white">${pct(m.probs.home)}%</strong></span><span>D <strong>${pct(m.probs.draw)}%</strong></span><span>A <strong class="text-white">${pct(m.probs.away)}%</strong></span><span class="text-primary font-bold uppercase">${m.lean}</span></div>
+      </div>`;
+    }).join('');
+  }
+
+  function reasonItem(c, kind) {
+    const col = kind === 'pro' ? 'primary' : 'secondary';
+    return `<div class="bg-surface-c p-2 border-l-2 border-${col}">
+      <div class="flex justify-between items-center"><span class="text-[10px] text-on-surface uppercase font-bold">${c.factor}</span><span class="text-[9px] text-${col} font-bold uppercase">${c.strength || ''}</span></div>
+      <p class="text-[10px] text-on-variant mt-1 m-0 leading-snug">${c.detail}</p></div>`;
+  }
+
+  function possBar(m) {
+    const hp = m.homePoss ?? 50, ap = m.awayPoss ?? 50, t = hp + ap;
+    return `<div class="h-full" style="width:${hp/t*100}%;background:#2f6fbf"></div><div class="h-full" style="width:${ap/t*100}%;background:#a24fb0"></div>`;
+  }
+
+  function select(id) {
+    const ms = DATA.matchdays[md].matches;
+    const m = ms.find(x => x.id === id) || ms[0];
+    active = m.id;
+    const h = pickIsHome(m), other = h ? m.away : m.home;
+
+    document.getElementById("d-date").innerText = m.date;
+    document.getElementById("d-venue").innerText = m.venue;
+    document.getElementById("d-conf").innerHTML = confTag(m.leanConfidence);
+    document.getElementById("d-h-name").innerText = m.home;
+    document.getElementById("d-a-name").innerText = m.away;
+    const hb = document.getElementById("d-h-badge"), ab = document.getElementById("d-a-badge");
+    hb.innerText = m.homeCode.slice(0,1); ab.innerText = m.awayCode.slice(0,1);
+    hb.className = "w-12 h-12 shrink-0 bg-surface-high border-2 flex items-center justify-center font-display text-2xl font-bold " + (h ? "border-primary text-primary" : "border-outline text-on-surface");
+    ab.className = "w-12 h-12 shrink-0 bg-surface-high border-2 flex items-center justify-center font-display text-2xl font-bold " + (!h ? "border-primary text-primary" : "border-outline text-on-surface");
+    document.getElementById("d-h-form").innerHTML = formBadges(m.homeForm);
+    document.getElementById("d-a-form").innerHTML = formBadges(m.awayForm);
+    document.getElementById("d-xg").innerText = "xG EDGE: " + (m.xgEdgeCode || m.xgEdgeTeam);
+
+    const pickCol = c => c === (h ? 'home' : 'away') ? 'text-primary' : (c === 'draw' ? 'text-on-variant' : 'text-secondary');
+    document.getElementById("d-prob-legend").innerHTML = `
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 ${h?'bg-primary':'bg-secondary'} inline-block"></span><span class="${pickCol('home')} font-bold">${m.homeCode}</span><span class="font-bold text-white text-sm">${pct(m.probs.home)}%</span></span>
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 bg-outline inline-block"></span><span class="text-on-variant font-bold">DRAW</span><span class="font-bold text-on-surface text-sm">${pct(m.probs.draw)}%</span></span>
+      <span class="flex items-center gap-1.5"><span class="font-bold text-white text-sm">${pct(m.probs.away)}%</span><span class="${pickCol('away')} font-bold">${m.awayCode}</span><span class="w-2 h-2 ${!h?'bg-primary':'bg-secondary'} inline-block"></span></span>`;
+    document.getElementById("d-bar").innerHTML = barSegs(m);
+    document.getElementById("d-lean").innerText = `${m.lean.toUpperCase()} (${pct(h ? m.probs.home : m.probs.away)}%)`;
+    document.getElementById("d-conf-note").innerText = m.leanConfidence;
+
+    document.getElementById("pro-title").innerText = "Why " + m.lean;
+    document.getElementById("con-title").innerText = "What points to " + other;
+    const pro = document.getElementById("d-pro"), con = document.getElementById("d-con");
+    pro.innerHTML = (m.pro && m.pro.length) ? m.pro.map(c => reasonItem(c, 'pro')).join('') : `<p class="text-[10px] text-on-variant italic">No single strong factor &mdash; a narrow lean.</p>`;
+    con.innerHTML = (m.con && m.con.length) ? m.con.map(c => reasonItem(c, 'con')).join('') : `<p class="text-[10px] text-on-variant italic">Little in the data favours ${other}.</p>`;
+
+    document.getElementById("d-h-poss-l").innerText = `${m.home} ${m.homePoss ?? '-'}%`;
+    document.getElementById("d-a-poss-l").innerText = `${m.awayPoss ?? '-'}% ${m.away}`;
+    document.getElementById("d-poss-bar").innerHTML = possBar(m);
+
+    renderRibbon(); renderList();
+  }
+
+  function renderPossStrip() {
+    document.getElementById("poss-strip").innerHTML = DATA.leaguePossession.map((t, i) => {
+      let cls = "border-outline-v text-on-variant";
+      if (t.val >= 65) cls = "border-primary/40 text-primary bg-primary/10";
+      else if (t.val >= 50) cls = "border-outline text-white bg-surface-c";
+      else if (t.val < 35) cls = "border-error/40 text-error bg-error/10";
+      return `<div class="p-1 border ${cls} rounded-xs" title="#${i+1} ${t.team}">
+        <div class="flex items-center justify-between text-[8px] text-on-variant"><span>${String(i+1).padStart(2,'0')}</span><span class="font-bold">${t.code}</span></div>
+        <span class="text-[10px] font-bold mt-0.5 block">${t.val}%</span></div>`;
+    }).join('');
+  }
+
+  function switchMd(k) { md = k; active = DATA.matchdays[k].matches[0].id; renderMdSwitch(); renderFilters(); select(active); }
+  function setFilter(f) { filter = f; renderFilters(); renderList(); }
+  function onSearch(v) { query = v.trim(); renderList(); }
+  function ribbon(x) { document.getElementById("ribbon").scrollBy({ left: x, behavior: 'smooth' }); }
+
+  function clock() {
+    const d = new Date();
+    const p = n => String(n).padStart(2, '0');
+    const el = document.getElementById("clock");
+    if (el) el.innerText = `${p(d.getUTCHours())}:${p(d.getUTCMinutes())}:${p(d.getUTCSeconds())} UTC`;
+  }
+  setInterval(clock, 1000); clock();
+
+  function boot(d) {
+    DATA = d; md = Object.keys(d.matchdays)[0];
+    active = d.matchdays[md].matches[0].id;
+    renderMdSwitch(); renderFilters(); renderPossStrip(); select(active);
+  }
+  // Use embedded data when present (standalone share file); otherwise fetch the
+  // companion ui_data.json (served alongside the page).
+  if (window.__UI_DATA__) {
+    boot(window.__UI_DATA__);
+  } else {
+    fetch("ui_data.json").then(r => r.json()).then(boot).catch(() => {
+      document.getElementById("match-list").innerHTML = `<p class="text-on-variant text-[11px] p-4">Could not load data (ui_data.json). Serve this page over http (e.g. <code>python -m http.server</code>) so the browser can fetch it.</p>`;
+    });
+  }
+</script>

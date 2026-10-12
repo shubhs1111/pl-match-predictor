@@ -1,0 +1,1141 @@
+[
+ {
+  "matchday": 1,
+  "match": "Everton vs Chelsea",
+  "pick": "Everton",
+  "pick_prob": 0.447,
+  "home": "Everton",
+  "away": "Chelsea",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Everton are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 2.3,
+    "detail": "Everton are in better recent form (1.8 vs 1.4 points a game, last 5)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.8,
+    "detail": "At home Everton get about 1.6 points a game; away, Chelsea get about 0.8."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 3.1,
+    "detail": "Chelsea usually create the better chances: more shots and higher xG (a clear edge)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Chelsea come in a bit fresher (more rest, or fewer games lately)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 2.1,
+    "detail": "Chelsea have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "Chelsea have had the better of recent meetings between them."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Fulham vs Hull",
+  "pick": "Fulham",
+  "pick_prob": 0.447,
+  "home": "Fulham",
+  "away": "Hull",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Fulham are at home, and home teams win far more often than they lose."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 5.1,
+    "detail": "Hull are in better recent form (1.6 vs 0.4 points a game, last 5)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 3.3,
+    "detail": "Hull come in a bit fresher (more rest, or fewer games lately)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 2.2,
+    "detail": "Hull usually create the better chances: more shots and higher xG (a slight edge)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.6,
+    "detail": "At home Fulham get about 0.8 points a game; away, Hull get about 1.3."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Brentford vs Liverpool",
+  "pick": "Liverpool",
+  "pick_prob": 0.412,
+  "home": "Brentford",
+  "away": "Liverpool",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 3.0,
+    "detail": "Liverpool usually create the better chances: more shots and higher xG (a clear edge)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 2.6,
+    "detail": "Liverpool have been the better team overall lately (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Brentford are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Man City vs Ipswich",
+  "pick": "Man City",
+  "pick_prob": 0.593,
+  "home": "Man City",
+  "away": "Ipswich",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Big factor",
+    "weight": 13.5,
+    "detail": "Man City usually create the better chances: more shots and higher xG (a big edge)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Big factor",
+    "weight": 11.3,
+    "detail": "Man City have been the better team overall lately (a big edge)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Man City are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Moderate factor",
+    "weight": 3.5,
+    "detail": "Man City have had the better of recent meetings between them."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 3.3,
+    "detail": "Ipswich come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Newcastle vs Aston Villa",
+  "pick": "Aston Villa",
+  "pick_prob": 0.401,
+  "home": "Newcastle",
+  "away": "Aston Villa",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 0.1,
+    "detail": "Aston Villa usually create the better chances: more shots and higher xG (a slight edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 6.9,
+    "detail": "Newcastle are in better recent form (1.6 vs 0.8 points a game, last 5)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Newcastle are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Brighton vs Crystal Palace",
+  "pick": "Brighton",
+  "pick_prob": 0.451,
+  "home": "Brighton",
+  "away": "Crystal Palace",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Brighton are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 4.4,
+    "detail": "Brighton are in better recent form (2.0 vs 0.8 points a game, last 5)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 4.3,
+    "detail": "Brighton have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 1.6,
+    "detail": "Brighton usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.0,
+    "detail": "Crystal Palace have had the better of recent meetings between them."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Bournemouth vs Sunderland",
+  "pick": "Bournemouth",
+  "pick_prob": 0.461,
+  "home": "Bournemouth",
+  "away": "Sunderland",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Bournemouth are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 3.5,
+    "detail": "Bournemouth have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 2.1,
+    "detail": "Bournemouth usually create the better chances: more shots and higher xG (a clear edge)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "At home Bournemouth get about 1.2 points a game; away, Sunderland get about 1.0."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 5.0,
+    "detail": "Sunderland are in better recent form (0.8 vs 0.6 points a game, last 5)."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Leeds vs Man United",
+  "pick": "Man United",
+  "pick_prob": 0.431,
+  "home": "Leeds",
+  "away": "Man United",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 3.1,
+    "detail": "Man United usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Leeds are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 2.8,
+    "detail": "Leeds are in better recent form (1.8 vs 1.0 points a game, last 5)."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Nott'm Forest vs Arsenal",
+  "pick": "Arsenal",
+  "pick_prob": 0.451,
+  "home": "Nott'm Forest",
+  "away": "Arsenal",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 3.1,
+    "detail": "Arsenal are in better recent form (2.4 vs 1.0 points a game, last 5)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 1.8,
+    "detail": "Arsenal usually create the better chances: more shots and higher xG (a big edge)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.6,
+    "detail": "At home Nott'm Forest get about 0.6 points a game; away, Arsenal get about 2.4."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Small factor",
+    "weight": 1.5,
+    "detail": "Arsenal have been the better team overall lately (a big edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Nott'm Forest are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 1,
+  "match": "Tottenham vs Coventry",
+  "pick": "Tottenham",
+  "pick_prob": 0.442,
+  "home": "Tottenham",
+  "away": "Coventry",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Tottenham are at home, and home teams win far more often than they lose."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 6.0,
+    "detail": "Coventry are in better recent form (0.6 vs 0.4 points a game, last 5)."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Ipswich vs Nott'm Forest",
+  "pick": "Nott'm Forest",
+  "pick_prob": 0.394,
+  "home": "Ipswich",
+  "away": "Nott'm Forest",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 4.0,
+    "detail": "Nott'm Forest usually create the better chances: more shots and higher xG (a clear edge)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 2.2,
+    "detail": "Nott'm Forest have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.7,
+    "detail": "Nott'm Forest have had the better of recent meetings between them."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Ipswich are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "Ipswich are in better recent form (1.2 vs 1.0 points a game, last 5)."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Aston Villa vs Man City",
+  "pick": "Man City",
+  "pick_prob": 0.467,
+  "home": "Aston Villa",
+  "away": "Man City",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 6.8,
+    "detail": "Man City are in better recent form (3.0 vs 0.8 points a game, last 5)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Moderate factor",
+    "weight": 4.9,
+    "detail": "At home Aston Villa get about 1.2 points a game; away, Man City get about 2.2."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 4.0,
+    "detail": "Man City usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Aston Villa are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Coventry vs Fulham",
+  "pick": "Fulham",
+  "pick_prob": 0.403,
+  "home": "Coventry",
+  "away": "Fulham",
+  "pro": [
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.9,
+    "detail": "At home Coventry get about 0.0 points a game; away, Fulham get about 0.6."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Coventry are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Arsenal vs Everton",
+  "pick": "Arsenal",
+  "pick_prob": 0.496,
+  "home": "Arsenal",
+  "away": "Everton",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Big factor",
+    "weight": 12.3,
+    "detail": "Arsenal usually create the better chances: more shots and higher xG (a big edge)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Arsenal are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 4.9,
+    "detail": "Arsenal have been the better team overall lately (a big edge)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Moderate factor",
+    "weight": 4.0,
+    "detail": "Arsenal have had the better of recent meetings between them."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Small factor",
+    "weight": 0.1,
+    "detail": "Everton come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Chelsea vs Tottenham",
+  "pick": "Chelsea",
+  "pick_prob": 0.442,
+  "home": "Chelsea",
+  "away": "Tottenham",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Chelsea are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Moderate factor",
+    "weight": 4.6,
+    "detail": "Chelsea have had the better of recent meetings between them."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 3.8,
+    "detail": "Chelsea have been the better team overall lately (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 0.4,
+    "detail": "At home Chelsea get about 1.4 points a game; away, Tottenham get about 1.4."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Liverpool vs Brighton",
+  "pick": "Liverpool",
+  "pick_prob": 0.442,
+  "home": "Liverpool",
+  "away": "Brighton",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Liverpool are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Moderate factor",
+    "weight": 4.3,
+    "detail": "At home Liverpool get about 1.4 points a game; away, Brighton get about 0.8."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 2.1,
+    "detail": "Liverpool have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.5,
+    "detail": "Liverpool have had the better of recent meetings between them."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 8.2,
+    "detail": "Brighton are in better recent form (2.0 vs 1.8 points a game, last 5)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Brighton come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Man United vs Bournemouth",
+  "pick": "Man United",
+  "pick_prob": 0.403,
+  "home": "Man United",
+  "away": "Bournemouth",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Man United are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Moderate factor",
+    "weight": 3.4,
+    "detail": "At home Man United get about 2.4 points a game; away, Bournemouth get about 1.6."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Small factor",
+    "weight": 2.0,
+    "detail": "Man United are in better recent form (1.0 vs 0.6 points a game, last 5)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Small factor",
+    "weight": 1.2,
+    "detail": "Bournemouth come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Crystal Palace vs Newcastle",
+  "pick": "Crystal Palace",
+  "pick_prob": 0.486,
+  "home": "Crystal Palace",
+  "away": "Newcastle",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Crystal Palace are at home, and home teams win far more often than they lose."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 5.4,
+    "detail": "Newcastle are in better recent form (1.6 vs 0.8 points a game, last 5)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Newcastle come in a bit fresher (more rest, or fewer games lately)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.3,
+    "detail": "At home Crystal Palace get about 0.4 points a game; away, Newcastle get about 0.8."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "Newcastle have had the better of recent meetings between them."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Hull vs Brentford",
+  "pick": "Brentford",
+  "pick_prob": 0.421,
+  "home": "Hull",
+  "away": "Brentford",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Brentford are in better recent form (1.8 vs 1.6 points a game, last 5)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Small factor",
+    "weight": 1.5,
+    "detail": "Brentford have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 1.2,
+    "detail": "Brentford usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Hull are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 2,
+  "match": "Sunderland vs Leeds",
+  "pick": "Sunderland",
+  "pick_prob": 0.421,
+  "home": "Sunderland",
+  "away": "Leeds",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Sunderland are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Moderate factor",
+    "weight": 2.1,
+    "detail": "At home Sunderland get about 1.4 points a game; away, Leeds get about 1.2."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.0,
+    "detail": "Sunderland have had the better of recent meetings between them."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 9.1,
+    "detail": "Leeds are in better recent form (1.8 vs 0.8 points a game, last 5)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 2.7,
+    "detail": "Leeds usually create the better chances: more shots and higher xG (a slight edge)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.6,
+    "detail": "Leeds come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Chelsea vs Man United",
+  "pick": "Man United",
+  "pick_prob": 0.464,
+  "home": "Chelsea",
+  "away": "Man United",
+  "pro": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 2.0,
+    "detail": "Man United usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 10.3,
+    "detail": "Chelsea are in better recent form (1.4 vs 1.0 points a game, last 5)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Chelsea are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Big factor",
+    "weight": 5.8,
+    "detail": "At home Chelsea get about 1.4 points a game; away, Man United get about 1.2."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Coventry vs Sunderland",
+  "pick": "Sunderland",
+  "pick_prob": 0.393,
+  "home": "Coventry",
+  "away": "Sunderland",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 5.1,
+    "detail": "Sunderland are in better recent form (0.8 vs 0.6 points a game, last 5)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Moderate factor",
+    "weight": 3.7,
+    "detail": "At home Coventry get about 0.0 points a game; away, Sunderland get about 1.0."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Coventry are at home, and home teams win far more often than they lose."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Hull vs Ipswich",
+  "pick": "Hull",
+  "pick_prob": 0.461,
+  "home": "Hull",
+  "away": "Ipswich",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Hull are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 5.3,
+    "detail": "Hull are in better recent form (1.6 vs 1.2 points a game, last 5)."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 4.3,
+    "detail": "Hull have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Hull usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Small factor",
+    "weight": 1.3,
+    "detail": "Ipswich come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Man City vs Brighton",
+  "pick": "Man City",
+  "pick_prob": 0.38,
+  "home": "Man City",
+  "away": "Brighton",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 9.3,
+    "detail": "Man City are in better recent form (3.0 vs 2.0 points a game, last 5)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Man City are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 4.3,
+    "detail": "Man City have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Small factor",
+    "weight": 1.6,
+    "detail": "Man City usually create the better chances: more shots and higher xG (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Brighton come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Bournemouth vs Leeds",
+  "pick": "Bournemouth",
+  "pick_prob": 0.532,
+  "home": "Bournemouth",
+  "away": "Leeds",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Bournemouth are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Big factor",
+    "weight": 5.8,
+    "detail": "Bournemouth have been the better team overall lately (a clear edge)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 7.8,
+    "detail": "Leeds are in better recent form (1.8 vs 0.6 points a game, last 5)."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "At home Bournemouth get about 1.2 points a game; away, Leeds get about 1.2."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Brentford vs Nott'm Forest",
+  "pick": "Brentford",
+  "pick_prob": 0.366,
+  "home": "Brentford",
+  "away": "Nott'm Forest",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 6.5,
+    "detail": "Brentford are in better recent form (1.8 vs 1.0 points a game, last 5)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Brentford are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 2.1,
+    "detail": "Brentford have been the better team overall lately (a clear edge)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Small factor",
+    "weight": 1.8,
+    "detail": "Brentford come in a bit fresher (more rest, or fewer games lately)."
+   }
+  ],
+  "con": [
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "Nott'm Forest have had the better of recent meetings between them."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Tottenham vs Crystal Palace",
+  "pick": "Tottenham",
+  "pick_prob": 0.371,
+  "home": "Tottenham",
+  "away": "Crystal Palace",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Tottenham are at home, and home teams win far more often than they lose."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Moderate factor",
+    "weight": 4.1,
+    "detail": "Crystal Palace are in better recent form (0.8 vs 0.4 points a game, last 5)."
+   },
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Moderate factor",
+    "weight": 3.3,
+    "detail": "Crystal Palace usually create the better chances: more shots and higher xG (a slight edge)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.3,
+    "detail": "Crystal Palace have had the better of recent meetings between them."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "At home Tottenham get about 1.0 points a game; away, Crystal Palace get about 1.0."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Aston Villa vs Fulham",
+  "pick": "Aston Villa",
+  "pick_prob": 0.427,
+  "home": "Aston Villa",
+  "away": "Fulham",
+  "pro": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 6.6,
+    "detail": "Aston Villa are in better recent form (0.8 vs 0.4 points a game, last 5)."
+   },
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Aston Villa are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Moderate factor",
+    "weight": 4.3,
+    "detail": "Aston Villa have had the better of recent meetings between them."
+   },
+   {
+    "factor": "Overall team quality",
+    "strength": "Moderate factor",
+    "weight": 4.1,
+    "detail": "Aston Villa have been the better team overall lately (a clear edge)."
+   }
+  ],
+  "con": []
+ },
+ {
+  "matchday": 3,
+  "match": "Liverpool vs Arsenal",
+  "pick": "Liverpool",
+  "pick_prob": 0.396,
+  "home": "Liverpool",
+  "away": "Arsenal",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Liverpool are at home, and home teams win far more often than they lose."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Quality of chances (xG)",
+    "strength": "Big factor",
+    "weight": 5.7,
+    "detail": "Arsenal usually create the better chances: more shots and higher xG (a clear edge)."
+   },
+   {
+    "factor": "Freshness & fixtures",
+    "strength": "Moderate factor",
+    "weight": 2.5,
+    "detail": "Arsenal come in a bit fresher (more rest, or fewer games lately)."
+   },
+   {
+    "factor": "When these teams meet",
+    "strength": "Small factor",
+    "weight": 1.1,
+    "detail": "Arsenal have had the better of recent meetings between them."
+   }
+  ]
+ },
+ {
+  "matchday": 3,
+  "match": "Newcastle vs Everton",
+  "pick": "Newcastle",
+  "pick_prob": 0.44,
+  "home": "Newcastle",
+  "away": "Everton",
+  "pro": [
+   {
+    "factor": "Home advantage",
+    "strength": "Big factor",
+    "weight": 6.1,
+    "detail": "Newcastle are at home, and home teams win far more often than they lose."
+   },
+   {
+    "factor": "Home & away record",
+    "strength": "Big factor",
+    "weight": 5.9,
+    "detail": "At home Newcastle get about 2.2 points a game; away, Everton get about 0.6."
+   }
+  ],
+  "con": [
+   {
+    "factor": "Recent results",
+    "strength": "Big factor",
+    "weight": 9.1,
+    "detail": "Everton are in better recent form (1.8 vs 1.6 points a game, last 5)."
+   }
+  ]
+ }
+]

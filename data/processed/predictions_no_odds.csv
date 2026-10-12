@@ -1,0 +1,31 @@
+matchday,date,match,P(home),P(draw),P(away),prediction,confidence
+1,2026-10-17,Everton vs Chelsea,0.447,0.233,0.32,Everton,0.447
+1,2026-10-17,Fulham vs Hull,0.447,0.223,0.33,Fulham,0.447
+1,2026-10-17,Brentford vs Liverpool,0.331,0.256,0.412,Liverpool,0.412
+1,2026-10-17,Man City vs Ipswich,0.593,0.211,0.196,Man City,0.593
+1,2026-10-17,Newcastle vs Aston Villa,0.326,0.273,0.401,Aston Villa,0.401
+1,2026-10-18,Brighton vs Crystal Palace,0.451,0.258,0.291,Brighton,0.451
+1,2026-10-18,Bournemouth vs Sunderland,0.461,0.257,0.281,Bournemouth,0.461
+1,2026-10-18,Leeds vs Man United,0.263,0.305,0.431,Man United,0.431
+1,2026-10-18,Nott'm Forest vs Arsenal,0.296,0.253,0.451,Arsenal,0.451
+1,2026-10-19,Tottenham vs Coventry,0.442,0.242,0.316,Tottenham,0.442
+2,2026-10-23,Ipswich vs Nott'm Forest,0.329,0.277,0.394,Nott'm Forest,0.394
+2,2026-10-24,Aston Villa vs Man City,0.246,0.288,0.467,Man City,0.467
+2,2026-10-24,Coventry vs Fulham,0.354,0.242,0.403,Fulham,0.403
+2,2026-10-24,Arsenal vs Everton,0.496,0.207,0.297,Arsenal,0.496
+2,2026-10-24,Chelsea vs Tottenham,0.442,0.232,0.327,Chelsea,0.442
+2,2026-10-25,Liverpool vs Brighton,0.442,0.231,0.327,Liverpool,0.442
+2,2026-10-25,Man United vs Bournemouth,0.403,0.271,0.326,Man United,0.403
+2,2026-10-25,Crystal Palace vs Newcastle,0.486,0.2,0.314,Crystal Palace,0.486
+2,2026-10-25,Hull vs Brentford,0.302,0.277,0.421,Brentford,0.421
+2,2026-10-25,Sunderland vs Leeds,0.421,0.254,0.325,Sunderland,0.421
+3,2026-10-31,Chelsea vs Man United,0.276,0.26,0.464,Man United,0.464
+3,2026-10-31,Coventry vs Sunderland,0.367,0.24,0.393,Sunderland,0.393
+3,2026-10-31,Hull vs Ipswich,0.461,0.247,0.292,Hull,0.461
+3,2026-10-31,Man City vs Brighton,0.38,0.29,0.33,Man City,0.38
+3,2026-10-31,Bournemouth vs Leeds,0.532,0.218,0.25,Bournemouth,0.532
+3,2026-10-31,Brentford vs Nott'm Forest,0.366,0.282,0.352,Brentford,0.366
+3,2026-10-31,Tottenham vs Crystal Palace,0.371,0.265,0.364,Tottenham,0.371
+3,2026-10-31,Aston Villa vs Fulham,0.427,0.221,0.352,Aston Villa,0.427
+3,2026-11-01,Liverpool vs Arsenal,0.396,0.222,0.382,Liverpool,0.396
+3,2026-11-02,Newcastle vs Everton,0.44,0.246,0.314,Newcastle,0.44

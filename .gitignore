@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Third-party raw datasets — NOT redistributed in this public repo.
+# See README for how to obtain them.
+/_all_events_stats.xlsx
+/datasets/
+/data/raw/
+/data/processed/matches_features.csv
+
+# Excel temp / lock files and any spreadsheets
+~$*
+*.xlsx
+
+# Third-party raw data kept at repo root locally (not redistributed)
+/understat_xg.csv
+/football_matches.csv
+
+# Stray / stale local files
+/reasons.js
+/PL Predictor Board.html
+/data/processed/predictions.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db

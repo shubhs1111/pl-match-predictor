@@ -1,0 +1,302 @@
+<title>PL Predictor Board</title>
+<style>
+  /* Layout: sticky header with match-day tabs over a single column of match cards.
+     Palette: considered pitch-green accent with warm amber for the away side,
+     neutral greys biased slightly green so they read as intentional. */
+  :root {
+    --bg: #f4f6f3;
+    --surface: #ffffff;
+    --fg: #16201a;
+    --muted: #5c6b61;
+    --line: #dde3dd;
+    --home: #2e7d4f;     /* home win */
+    --draw: #9aa6a0;     /* draw */
+    --away: #d8863b;     /* away win */
+    --accent: #2e7d4f;
+    --chip: #eaf1ea;
+    --poss-h: #2f6fbf; --poss-a: #a24fb0;   /* possession: home (blue) vs away (purple) */
+    --shadow: 0 1px 2px rgba(22,32,26,.06), 0 6px 20px rgba(22,32,26,.05);
+    --font-display: "Oswald", system-ui, sans-serif;
+    --font-body: "Source Sans 3", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10140f; --surface: #181e17; --fg: #e8efe8; --muted: #9aa89d;
+      --line: #2a332a; --home: #4cae74; --draw: #7f8d84; --away: #e0a05a;
+      --accent: #4cae74; --chip: #1f271e;
+      --poss-h: #5f9bdf; --poss-a: #c07fcf;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10140f; --surface: #181e17; --fg: #e8efe8; --muted: #9aa89d;
+    --line: #2a332a; --home: #4cae74; --draw: #7f8d84; --away: #e0a05a;
+    --accent: #4cae74; --chip: #1f271e;
+    --poss-h: #5f9bdf; --poss-a: #c07fcf;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px rgba(0,0,0,.3);
+    color-scheme: dark;
+  }
+  body { background: var(--bg); color: var(--fg); font-family: var(--font-body); line-height: 1.5; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; padding-block: 0 48px; }
+
+  header.top {
+    position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px); border-bottom: 1px solid var(--line);
+  }
+  .top-inner { max-width: 760px; margin: 0 auto; padding: 18px 16px 0; }
+  h1 {
+    font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 5vw, 2rem);
+    letter-spacing: .5px; margin: 0; text-transform: uppercase; text-wrap: balance;
+  }
+  .sub { color: var(--muted); font-size: .9rem; margin: 4px 0 14px; max-width: 60ch; }
+  .tabs { display: flex; gap: 4px; }
+  .tab {
+    appearance: none; border: 1px solid transparent; background: transparent; color: var(--muted);
+    font-family: var(--font-display); font-size: .82rem; letter-spacing: .4px; text-transform: uppercase;
+    padding: 9px 12px; border-radius: 8px 8px 0 0; cursor: pointer; border-bottom: 2px solid transparent;
+  }
+  .tab[aria-selected="true"] { color: var(--fg); border-bottom-color: var(--accent); }
+  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab small { display: block; font-family: var(--font-body); font-size: .68rem; text-transform: none; letter-spacing: 0; }
+
+  .daynote { color: var(--muted); font-size: .82rem; margin: 20px 2px 10px; font-variant-numeric: tabular-nums; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 14px 16px; margin-bottom: 10px; box-shadow: var(--shadow);
+  }
+  .matchrow { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .teams { font-size: 1.02rem; min-width: 0; }
+  .teams .vs { color: var(--muted); font-size: .8rem; padding: 0 6px; }
+  .win { font-weight: 700; color: var(--home); }
+  .pick {
+    flex: none; font-family: var(--font-display); font-size: .72rem; letter-spacing: .3px;
+    text-transform: uppercase; color: var(--fg); background: var(--chip);
+    border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; white-space: nowrap;
+  }
+  .pick b { color: var(--accent); }
+
+  .bar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; margin: 12px 0 8px; background: var(--line); }
+  .bar span { display: block; height: 100%; }
+  /* Three distinct outcomes: green = predicted, amber = the other team wins, grey = draw. */
+  .seg-pick { background: var(--home); }
+  .seg-other { background: var(--away); }
+  .seg-draw { background: var(--draw); }
+
+  .legend { display: flex; justify-content: space-between; gap: 8px; font-size: .8rem; font-variant-numeric: tabular-nums; }
+  .legend div { display: flex; align-items: center; gap: 5px; color: var(--muted); min-width: 0; }
+  .legend .pct { color: var(--fg); font-weight: 600; }
+  .dot { width: 9px; height: 9px; border-radius: 2px; flex: none; }
+  .dot-pick { background: var(--home); }
+  .dot-other { background: var(--away); }
+  .dot-draw { background: var(--draw); }
+  .legend .lead, .legend .lead .pct { color: var(--home); }
+  .legend .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .poss { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding-top: 9px;
+          border-top: 1px dashed var(--line); font-size: .78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .poss .tag { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .3px; font-size: .66rem; }
+  .possbar { flex: 1; display: flex; height: 6px; border-radius: 999px; overflow: hidden; min-width: 60px; }
+  .possbar .ph { background: var(--poss-h); }
+  .possbar .pa { background: var(--poss-a); }
+  .poss .v { color: var(--fg); font-weight: 600; }
+
+  details.why { margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 8px; }
+  details.why summary { cursor: pointer; font-family: var(--font-display); text-transform: uppercase;
+    letter-spacing: .3px; font-size: .72rem; color: var(--accent); list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+  details.why summary::-webkit-details-marker { display: none; }
+  details.why summary::before { content: "▸"; font-size: .7rem; }
+  details.why[open] summary::before { content: "▾"; }
+  details.why summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .why-body { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 10px; }
+  @media (max-width: 460px) { .why-body { grid-template-columns: 1fr; } }
+  .why-col { min-width: 0; }
+  .why-h { font-family: var(--font-display); text-transform: uppercase; letter-spacing: .3px;
+    font-size: .68rem; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  .pro-h { color: var(--home); } .con-h { color: var(--away); }
+  .why-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .why-col li { font-size: .82rem; }
+  .why-note { font-size: .76rem; color: var(--muted); margin-top: 8px; }
+  .wtag { display: inline-block; font-size: .62rem; text-transform: uppercase; letter-spacing: .3px;
+    padding: 1px 6px; border-radius: 999px; background: var(--chip); border: 1px solid var(--line);
+    color: var(--muted); margin-right: 6px; vertical-align: middle; }
+  .why-col .det { color: var(--muted); font-size: .78rem; margin-top: 2px; }
+  .why-col .none { color: var(--muted); font-style: italic; }
+
+  footer { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+  footer b { color: var(--fg); font-weight: 600; }
+  footer ul { margin: 8px 0 0; padding-left: 18px; }
+  footer li { margin: 3px 0; }
+</style>
+
+<header class="top">
+  <div class="top-inner">
+    <h1>Premier League Predictor</h1>
+    <p class="sub">A data-only model &mdash; recent form, home/away record, goal &amp; xG output, opponent-adjusted strength and head-to-head. No bookmaker odds. Values are win/draw/win probabilities, not certainties.</p>
+    <div class="tabs" role="tablist" id="tabs"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="board"></div>
+  <footer>
+    <b>How to read it.</b> Each bar splits a match into home win / draw / away win. The pick is simply the most likely single outcome &mdash; a 45% pick is a lean, not a lock.
+    <ul>
+      <li><b>Honest accuracy:</b> ~47% across a 1,900-match backtest (vs 44% for always picking home). Football is high-variance by nature.</li>
+      <li><b>Possession</b> (season average) is shown per match as context only. It was tested as a model feature and left out &mdash; it didn't improve accuracy, as ball control is already captured by the xG-strength rating.</li>
+      <li><b>Not included:</b> injuries and confirmed line-ups (the latter aren't published until ~1h before kickoff).</li>
+    </ul>
+  </footer>
+</main>
+
+<script src="reasons.js"></script>
+<script>
+  const DAYS = [
+    { md: 1, label: "Match Day 1", span: "17–19 Oct 2026", games: [
+      ["Everton","Chelsea",0.447,0.233,0.320],
+      ["Fulham","Hull",0.447,0.223,0.330],
+      ["Brentford","Liverpool",0.331,0.256,0.412],
+      ["Man City","Ipswich",0.593,0.211,0.196],
+      ["Newcastle","Aston Villa",0.326,0.273,0.401],
+      ["Brighton","Crystal Palace",0.451,0.258,0.291],
+      ["Bournemouth","Sunderland",0.461,0.257,0.281],
+      ["Leeds","Man United",0.263,0.305,0.431],
+      ["Nott'm Forest","Arsenal",0.296,0.253,0.451],
+      ["Tottenham","Coventry",0.442,0.242,0.316],
+    ]},
+    { md: 2, label: "Match Day 2", span: "23–25 Oct 2026", games: [
+      ["Ipswich","Nott'm Forest",0.329,0.277,0.394],
+      ["Aston Villa","Man City",0.246,0.288,0.467],
+      ["Coventry","Fulham",0.354,0.242,0.403],
+      ["Arsenal","Everton",0.496,0.207,0.297],
+      ["Chelsea","Tottenham",0.442,0.232,0.327],
+      ["Liverpool","Brighton",0.442,0.231,0.327],
+      ["Man United","Bournemouth",0.403,0.271,0.326],
+      ["Crystal Palace","Newcastle",0.486,0.200,0.314],
+      ["Hull","Brentford",0.302,0.277,0.421],
+      ["Sunderland","Leeds",0.421,0.254,0.325],
+    ]},
+    { md: 3, label: "Match Day 3", span: "31 Oct–2 Nov 2026", games: [
+      ["Chelsea","Man United",0.276,0.260,0.464],
+      ["Coventry","Sunderland",0.367,0.240,0.393],
+      ["Hull","Ipswich",0.461,0.247,0.292],
+      ["Man City","Brighton",0.380,0.290,0.330],
+      ["Bournemouth","Leeds",0.532,0.218,0.250],
+      ["Brentford","Nott'm Forest",0.366,0.282,0.352],
+      ["Tottenham","Crystal Palace",0.371,0.265,0.364],
+      ["Aston Villa","Fulham",0.427,0.221,0.352],
+      ["Liverpool","Arsenal",0.396,0.222,0.382],
+      ["Newcastle","Everton",0.440,0.246,0.314],
+    ]},
+  ];
+
+  // Current-season (2026-27) average possession % per team. Context only -
+  // tested and deliberately left OUT of the prediction model.
+  const POSS = {
+    "Man City":71.9,"Brighton":71.4,"Man United":62.3,"Liverpool":61.7,"Fulham":61.6,
+    "Arsenal":59.8,"Tottenham":58.9,"Sunderland":51.5,"Brentford":47.6,"Aston Villa":46.6,
+    "Newcastle":46.4,"Bournemouth":45.1,"Everton":42.7,"Nott'm Forest":42.6,"Coventry":42.3,
+    "Leeds":41.1,"Ipswich":40.7,"Crystal Palace":40.6,"Chelsea":36.5,"Hull":28.7
+  };
+
+  const pct = x => Math.round(x * 100);
+
+  // Per-match explanations ("why"), loaded from the companion reasons.json.
+  // They show factual pre-match edges for each team; the probability bar above
+  // remains the model's forecast.
+  let REASONS = {};
+  let currentIndex = 0;
+
+  function whyHtml(match) {
+    const o = REASONS[match];
+    if (!o) return `<div class="why-body"><div class="why-col">Explanation loading…</div></div>`;
+    const other = o.challenger || (o.pick === o.home ? o.away : o.home);
+    const row = c => `<li><span class="wtag">${c.strength}</span><b>${c.factor}</b><div class="det">${c.detail}</div></li>`;
+    const pros = o.pro.length ? o.pro.map(row).join("")
+      : `<li class="none">No clear measured edge supports this pick — it is a model lean in a conflicting fixture.</li>`;
+    const cons = o.con.length ? o.con.map(row).join("")
+      : `<li class="none">Little in the data favours ${other}.</li>`;
+    return `<div class="why-body">
+      <div class="why-col"><div class="why-h pro-h">Why ${o.pick} is favoured</div><ul>${pros}</ul></div>
+      <div class="why-col"><div class="why-h con-h">What points to ${other}</div><ul>${cons}</ul></div>
+    </div>
+    <div class="why-note">These are the measured pre-match edges for each side, ranked by the size of the gap. They explain the context behind the forecast, not separate guarantees.</div>`;
+  }
+
+  function possRow(home, away) {
+    const hp = POSS[home], ap = POSS[away];
+    if (hp == null || ap == null) return "";
+    const total = hp + ap;
+    return `<div class="poss" title="Season-average possession. Context only — not used in the prediction.">
+      <span class="tag">Possession</span>
+      <span class="v">${hp}%</span>
+      <div class="possbar"><span class="ph" style="width:${hp/total*100}%"></span><span class="pa" style="width:${ap/total*100}%"></span></div>
+      <span class="v">${ap}%</span>
+    </div>`;
+  }
+
+  function card(g) {
+    const [home, away, ph, pd, pa] = g;
+    const pk = (ph >= pd && ph >= pa) ? "h" : (pa > ph && pa >= pd) ? "a" : "d";
+    const pick = pk === "h" ? home : pk === "a" ? away : "Draw";
+    const conf = pct(Math.max(ph, pd, pa));
+    const seg = k => k === pk ? "seg-pick" : (k === "d" ? "seg-draw" : "seg-other");
+    const dot = k => k === pk ? "dot-pick" : (k === "d" ? "dot-draw" : "dot-other");
+    const lead = k => k === pk ? "lead" : "";
+    const el = document.createElement("div");
+    el.className = "card";
+    el.innerHTML = `
+      <div class="matchrow">
+        <div class="teams"><span class="${pk==='h'?'win':''}">${home}</span><span class="vs">v</span><span class="${pk==='a'?'win':''}">${away}</span></div>
+        <div class="pick">Pick · <b>${pick}</b> ${conf}%</div>
+      </div>
+      <div class="bar" role="img" aria-label="${home} win ${pct(ph)} percent, draw ${pct(pd)} percent, ${away} win ${pct(pa)} percent. Predicted: ${pick}.">
+        <span class="${seg('h')}" style="width:${ph*100}%"></span>
+        <span class="${seg('d')}" style="width:${pd*100}%"></span>
+        <span class="${seg('a')}" style="width:${pa*100}%"></span>
+      </div>
+      <div class="legend">
+        <div class="${lead('h')}"><span class="dot ${dot('h')}"></span><span class="nm">${home}</span>&nbsp;<span class="pct">${pct(ph)}%</span></div>
+        <div class="${lead('d')}"><span class="dot ${dot('d')}"></span>Draw&nbsp;<span class="pct">${pct(pd)}%</span></div>
+        <div class="${lead('a')}"><span class="dot ${dot('a')}"></span><span class="nm">${away}</span>&nbsp;<span class="pct">${pct(pa)}%</span></div>
+      </div>
+      ${possRow(home, away)}
+      <details class="why"><summary>Why ${pick}?</summary>${whyHtml(home + " vs " + away)}</details>`;
+    return el;
+  }
+
+  function render(mdIndex) {
+    currentIndex = mdIndex;
+    const day = DAYS[mdIndex];
+    const board = document.getElementById("board");
+    board.innerHTML = "";
+    const note = document.createElement("div");
+    note.className = "daynote";
+    note.textContent = `${day.span} · 10 matches`;
+    board.appendChild(note);
+    day.games.forEach(g => board.appendChild(card(g)));
+    document.querySelectorAll(".tab").forEach((t, i) => t.setAttribute("aria-selected", i === mdIndex));
+    try { localStorage.setItem("pl_md", String(mdIndex)); } catch (e) {}
+  }
+
+  const tabs = document.getElementById("tabs");
+  DAYS.forEach((d, i) => {
+    const b = document.createElement("button");
+    b.className = "tab"; b.setAttribute("role", "tab"); b.id = "tab" + i;
+    b.innerHTML = `${d.label}<small>${d.span}</small>`;
+    b.addEventListener("click", () => render(i));
+    tabs.appendChild(b);
+  });
+
+  let start = 0;
+  try { const s = parseInt(localStorage.getItem("pl_md"), 10); if (s >= 0 && s < DAYS.length) start = s; } catch (e) {}
+  render(start);
+
+  // reasons.js also works when this dashboard is opened directly from disk;
+  // browsers commonly block fetch() of a sibling JSON file on file:// URLs.
+  const explanationList = Array.isArray(window.PL_REASONS) ? window.PL_REASONS : [];
+  explanationList.forEach(o => { REASONS[o.match] = o; });
+  render(currentIndex);
+</script>
