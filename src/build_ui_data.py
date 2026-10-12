@@ -43,7 +43,7 @@ VENUES = {
     "Hull": "MKM Stadium, Hull", "Sunderland": "Stadium of Light, Sunderland",
 }
 POSS_MAP = {"Man Utd": "Man United", "Spurs": "Tottenham", "Sheff Utd": "Sheffield United"}
-MD_RANGES = {1: "17 – 19 OCT 2026", 2: "23 – 25 OCT 2026", 3: "31 OCT – 02 NOV 2026"}
+MD_RANGES = {7: "17 – 19 OCT 2026", 8: "23 – 25 OCT 2026", 9: "31 OCT – 02 NOV 2026"}
 
 
 def recent_form(matches: pd.DataFrame) -> dict:
